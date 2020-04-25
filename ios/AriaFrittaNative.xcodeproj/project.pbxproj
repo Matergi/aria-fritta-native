@@ -1,0 +1,1344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* AriaFrittaNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AriaFrittaNativeTests.m */; };
+		04E4BDB6AE45470F93B30717 /* Nexa-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D9CA2FB582F4ACCBA66D4E3 /* Nexa-BlackItalic.ttf */; };
+		0AE4F9D0A974213CDF8E9144 /* libPods-AriaFrittaNative-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8939A079FCE85D8DBD2465C6 /* libPods-AriaFrittaNative-tvOS.a */; };
+		0AF0F4A5404E485E8016079E /* Nexa-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5542704B22AA46B38E612314 /* Nexa-HeavyItalic.ttf */; };
+		0CA12EDC52AB4961B3891868 /* Nexa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CC715DA761F46B3BF652113 /* Nexa-Regular.ttf */; };
+		0E0230EC615341EA8EE44D3F /* Nexa-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51AFA379DCAC469A8927A675 /* Nexa-ThinItalic.ttf */; };
+		10324C3289A743BDB2E9C2C8 /* Nexa-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7448B8AEA8E74129A162DF1E /* Nexa-BoldItalic.ttf */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		14CCCD30233E24109EBBAEC2 /* libPods-AriaFrittaNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E25B98E315F09DCB3C4A2A /* libPods-AriaFrittaNative.a */; };
+		14F9C9162B2A4FB6B0C19F77 /* Quicksand_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12EFDE560FAE4ADFAF6708D6 /* Quicksand_Bold.otf */; };
+		15C79808D9AF4445AB6103DB /* Nexa-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C9C224BC42491F9A669E5A /* Nexa-Book.ttf */; };
+		18ACCA11EE62455CB1AF6916 /* Nexa-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBCD3B32E9CC4F47AF03AA50 /* Nexa-Italic.ttf */; };
+		1C9CF3BAAEFF3338F42EE831 /* libPods-AriaFrittaNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1139F24C706EA614F35140A /* libPods-AriaFrittaNativeTests.a */; };
+		2B24131677EC4822B6F30BF0 /* Quicksand_Book_Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7CEA85062FC466280A678B7 /* Quicksand_Book_Oblique.otf */; };
+		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* AriaFrittaNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AriaFrittaNativeTests.m */; };
+		4298C9DD243A1D2D0058486D /* TouchVisualizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298C9DC243A1D2D0058486D /* TouchVisualizer.m */; };
+		42B9036B241FE71F0060B0DE /* BridgeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B90369241FE71F0060B0DE /* BridgeInfo.m */; };
+		42B90372241FF1650060B0DE /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B90371241FF1650060B0DE /* Queue.m */; };
+		42B90377241FF2070060B0DE /* BridgeFcm.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B90376241FF2070060B0DE /* BridgeFcm.m */; };
+		42B90379241FF3350060B0DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B90378241FF3350060B0DE /* GoogleService-Info.plist */; };
+		42B9037A241FF3350060B0DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B90378241FF3350060B0DE /* GoogleService-Info.plist */; };
+		42B9037B241FF3350060B0DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B90378241FF3350060B0DE /* GoogleService-Info.plist */; };
+		42B9037C241FF3350060B0DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B90378241FF3350060B0DE /* GoogleService-Info.plist */; };
+		5D3F568C2371B47700639423 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F568B2371B47700639423 /* File.swift */; };
+		5DE98894FE674006A4C0B7AD /* Nexa-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 218290ED63194FC29CA82173 /* Nexa-LightItalic.ttf */; };
+		5FA833036A8744FEA1B974A6 /* Nexa-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C22E90997BAE4B9EA33F6050 /* Nexa-Black.ttf */; };
+		6609EE5727BA462D8575BCC9 /* Quicksand_Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABCC94C783864A11A0CCCB8B /* Quicksand_Book.otf */; };
+		6E213A6D942A4CBF895DCF1F /* Nexa-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EAE40D1300A4EA597769907 /* Nexa-Thin.ttf */; };
+		74A41E437E564E789395DA8F /* Nexa-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 507FD97E8F0647EE926CC910 /* Nexa-BookItalic.ttf */; };
+		78551D15C2EB4AE8940995A0 /* Nexa-XBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0346770494074845987877E7 /* Nexa-XBoldItalic.ttf */; };
+		7AFEB71C2A1243E997D6BB28 /* Nexa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C96C4A3122434697D1213B /* Nexa-Bold.ttf */; };
+		9DD21FB20CF9423D9762C5D0 /* Quicksand_Light_Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42DA8E27B46B42A082C97DB3 /* Quicksand_Light_Oblique.otf */; };
+		A8CD643A19999D8BAF65E588 /* libPods-AriaFrittaNative-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB46D3DE407E2C7C141F623B /* libPods-AriaFrittaNative-tvOSTests.a */; };
+		AE54002ADEA54EAB8D81A15A /* Quicksand_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF54508CBB74E678A4EA8A0 /* Quicksand_Light.otf */; };
+		AF15BBC06FA2480DA0181300 /* Nexa-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 567948F2EC914EDF95570618 /* Nexa-Heavy.ttf */; };
+		B373A07EE0244E0A8D54F062 /* Nexa-XBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1E348EBAB14172B59A33B2 /* Nexa-XBold.ttf */; };
+		DD89B7900305499B87C8DBFB /* Nexa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5985BFDAF394D1A8E0E808A /* Nexa-Light.ttf */; };
+		DE2D525F0D36472EAB76E1EE /* Quicksand_Bold_Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE3E9C1717C94C00ABA2CE56 /* Quicksand_Bold_Oblique.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = AriaFrittaNative;
+		};
+		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
+			remoteInfo = "AriaFrittaNative-tvOS";
+		};
+		5D7DB12623D5D30D00A0E35D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12B96990A6224EDDB2CCC8EE /* RangeSlider.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 043F1FDA20BDDACF00904784;
+			remoteInfo = RangeSlider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* AriaFrittaNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AriaFrittaNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* AriaFrittaNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AriaFrittaNativeTests.m; sourceTree = "<group>"; };
+		0346770494074845987877E7 /* Nexa-XBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-XBoldItalic.ttf"; path = "../src/Resources/Fonts/Nexa-XBoldItalic.ttf"; sourceTree = "<group>"; };
+		0EAE40D1300A4EA597769907 /* Nexa-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Thin.ttf"; path = "../src/Resources/Fonts/Nexa-Thin.ttf"; sourceTree = "<group>"; };
+		12B96990A6224EDDB2CCC8EE /* RangeSlider.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RangeSlider.xcodeproj; path = "../node_modules/react-native-range-slider/ios/RangeSlider.xcodeproj"; sourceTree = "<group>"; };
+		12EFDE560FAE4ADFAF6708D6 /* Quicksand_Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Quicksand_Bold.otf; path = ../src/Resources/Fonts/Quicksand_Bold.otf; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* AriaFrittaNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AriaFrittaNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AriaFrittaNative/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AriaFrittaNative/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AriaFrittaNative/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AriaFrittaNative/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AriaFrittaNative/main.m; sourceTree = "<group>"; };
+		218290ED63194FC29CA82173 /* Nexa-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-LightItalic.ttf"; path = "../src/Resources/Fonts/Nexa-LightItalic.ttf"; sourceTree = "<group>"; };
+		26474C0C9842BBA3891611CD /* Pods-AriaFrittaNative-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AriaFrittaNative-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AriaFrittaNative-tvOS/Pods-AriaFrittaNative-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		2A1E348EBAB14172B59A33B2 /* Nexa-XBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-XBold.ttf"; path = "../src/Resources/Fonts/Nexa-XBold.ttf"; sourceTree = "<group>"; };
+		2CC715DA761F46B3BF652113 /* Nexa-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Regular.ttf"; path = "../src/Resources/Fonts/Nexa-Regular.ttf"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* AriaFrittaNative-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AriaFrittaNative-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* AriaFrittaNative-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AriaFrittaNative-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		352AEBC27F12442884D0BE5A /* libRangeSlider.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRangeSlider.a; sourceTree = "<group>"; };
+		420DA7FA242ED4EC00CD16BC /* libreact-native-image-resizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-image-resizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4298C9DC243A1D2D0058486D /* TouchVisualizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchVisualizer.m; path = AriaFrittaNative/TouchVisualizer.m; sourceTree = "<group>"; };
+		4298C9DE243A1D410058486D /* TouchVisualizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TouchVisualizer.h; path = AriaFrittaNative/TouchVisualizer.h; sourceTree = "<group>"; };
+		42B90369241FE71F0060B0DE /* BridgeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeInfo.m; sourceTree = "<group>"; };
+		42B9036A241FE71F0060B0DE /* BridgeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeInfo.h; sourceTree = "<group>"; };
+		42B90370241FF1580060B0DE /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		42B90371241FF1650060B0DE /* Queue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		42B90375241FF1F30060B0DE /* BridgeFcm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeFcm.h; sourceTree = "<group>"; };
+		42B90376241FF2070060B0DE /* BridgeFcm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeFcm.m; sourceTree = "<group>"; };
+		42B90378241FF3350060B0DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42B90384242007670060B0DE /* BeautyOps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = BeautyOps.entitlements; path = AriaFrittaNative/BeautyOps.entitlements; sourceTree = "<group>"; };
+		42DA8E27B46B42A082C97DB3 /* Quicksand_Light_Oblique.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Quicksand_Light_Oblique.otf; path = ../src/Resources/Fonts/Quicksand_Light_Oblique.otf; sourceTree = "<group>"; };
+		507FD97E8F0647EE926CC910 /* Nexa-BookItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-BookItalic.ttf"; path = "../src/Resources/Fonts/Nexa-BookItalic.ttf"; sourceTree = "<group>"; };
+		51AFA379DCAC469A8927A675 /* Nexa-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-ThinItalic.ttf"; path = "../src/Resources/Fonts/Nexa-ThinItalic.ttf"; sourceTree = "<group>"; };
+		5542704B22AA46B38E612314 /* Nexa-HeavyItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-HeavyItalic.ttf"; path = "../src/Resources/Fonts/Nexa-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		567948F2EC914EDF95570618 /* Nexa-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Heavy.ttf"; path = "../src/Resources/Fonts/Nexa-Heavy.ttf"; sourceTree = "<group>"; };
+		5D3F56862371AED500639423 /* liblottie-react-native.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-react-native.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3F56882371AEDA00639423 /* liblottie-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3F568A2371B47600639423 /* AriaFrittaNative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AriaFrittaNative-Bridging-Header.h"; sourceTree = "<group>"; };
+		5D3F568B2371B47700639423 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		5D9CA2FB582F4ACCBA66D4E3 /* Nexa-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-BlackItalic.ttf"; path = "../src/Resources/Fonts/Nexa-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5EC35B71345973ECFDD9FEEB /* Pods-AriaFrittaNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AriaFrittaNative.debug.xcconfig"; path = "Target Support Files/Pods-AriaFrittaNative/Pods-AriaFrittaNative.debug.xcconfig"; sourceTree = "<group>"; };
+		5EF54508CBB74E678A4EA8A0 /* Quicksand_Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Quicksand_Light.otf; path = ../src/Resources/Fonts/Quicksand_Light.otf; sourceTree = "<group>"; };
+		61E25B98E315F09DCB3C4A2A /* libPods-AriaFrittaNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AriaFrittaNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C96C4A3122434697D1213B /* Nexa-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Bold.ttf"; path = "../src/Resources/Fonts/Nexa-Bold.ttf"; sourceTree = "<group>"; };
+		7448B8AEA8E74129A162DF1E /* Nexa-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-BoldItalic.ttf"; path = "../src/Resources/Fonts/Nexa-BoldItalic.ttf"; sourceTree = "<group>"; };
+		7A3F5314D832011130257868 /* Pods-AriaFrittaNative-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AriaFrittaNative-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AriaFrittaNative-tvOS/Pods-AriaFrittaNative-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		83A01C37E0AE6B9BFAA2B2B1 /* Pods-AriaFrittaNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AriaFrittaNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-AriaFrittaNativeTests/Pods-AriaFrittaNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88296EECAA26F7FEAFBBF280 /* Pods-AriaFrittaNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AriaFrittaNative.release.xcconfig"; path = "Target Support Files/Pods-AriaFrittaNative/Pods-AriaFrittaNative.release.xcconfig"; sourceTree = "<group>"; };
+		8939A079FCE85D8DBD2465C6 /* libPods-AriaFrittaNative-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AriaFrittaNative-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABCC94C783864A11A0CCCB8B /* Quicksand_Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Quicksand_Book.otf; path = ../src/Resources/Fonts/Quicksand_Book.otf; sourceTree = "<group>"; };
+		BA0F12EB8120022A1DF4AE00 /* Pods-AriaFrittaNative-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AriaFrittaNative-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AriaFrittaNative-tvOSTests/Pods-AriaFrittaNative-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C22E90997BAE4B9EA33F6050 /* Nexa-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Black.ttf"; path = "../src/Resources/Fonts/Nexa-Black.ttf"; sourceTree = "<group>"; };
+		C7C9C224BC42491F9A669E5A /* Nexa-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Book.ttf"; path = "../src/Resources/Fonts/Nexa-Book.ttf"; sourceTree = "<group>"; };
+		CA39FD9224BB3CDD82E266CF /* Pods-AriaFrittaNative-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AriaFrittaNative-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AriaFrittaNative-tvOSTests/Pods-AriaFrittaNative-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1139F24C706EA614F35140A /* libPods-AriaFrittaNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AriaFrittaNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7CEA85062FC466280A678B7 /* Quicksand_Book_Oblique.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Quicksand_Book_Oblique.otf; path = ../src/Resources/Fonts/Quicksand_Book_Oblique.otf; sourceTree = "<group>"; };
+		D86B446C8CA2D64048AA3DDD /* Pods-AriaFrittaNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AriaFrittaNativeTests.release.xcconfig"; path = "Target Support Files/Pods-AriaFrittaNativeTests/Pods-AriaFrittaNativeTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F5985BFDAF394D1A8E0E808A /* Nexa-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Light.ttf"; path = "../src/Resources/Fonts/Nexa-Light.ttf"; sourceTree = "<group>"; };
+		FB46D3DE407E2C7C141F623B /* libPods-AriaFrittaNative-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AriaFrittaNative-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBCD3B32E9CC4F47AF03AA50 /* Nexa-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Italic.ttf"; path = "../src/Resources/Fonts/Nexa-Italic.ttf"; sourceTree = "<group>"; };
+		FE3E9C1717C94C00ABA2CE56 /* Quicksand_Bold_Oblique.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Quicksand_Bold_Oblique.otf; path = ../src/Resources/Fonts/Quicksand_Bold_Oblique.otf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9CF3BAAEFF3338F42EE831 /* libPods-AriaFrittaNativeTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CCCD30233E24109EBBAEC2 /* libPods-AriaFrittaNative.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4781E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AE4F9D0A974213CDF8E9144 /* libPods-AriaFrittaNative-tvOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48D1E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8CD643A19999D8BAF65E588 /* libPods-AriaFrittaNative-tvOSTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* AriaFrittaNativeTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* AriaFrittaNativeTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = AriaFrittaNativeTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* AriaFrittaNative */ = {
+			isa = PBXGroup;
+			children = (
+				4298C9DC243A1D2D0058486D /* TouchVisualizer.m */,
+				42B90384242007670060B0DE /* BeautyOps.entitlements */,
+				42B90378241FF3350060B0DE /* GoogleService-Info.plist */,
+				42B90374241FF1CF0060B0DE /* Fcm */,
+				42B9036F241FF13B0060B0DE /* Queue */,
+				42B90368241FE71F0060B0DE /* Info */,
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				4298C9DE243A1D410058486D /* TouchVisualizer.h */,
+			);
+			name = AriaFrittaNative;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				420DA7FA242ED4EC00CD16BC /* libreact-native-image-resizer.a */,
+				5D3F56882371AEDA00639423 /* liblottie-ios.a */,
+				5D3F56862371AED500639423 /* liblottie-react-native.a */,
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
+				61E25B98E315F09DCB3C4A2A /* libPods-AriaFrittaNative.a */,
+				8939A079FCE85D8DBD2465C6 /* libPods-AriaFrittaNative-tvOS.a */,
+				FB46D3DE407E2C7C141F623B /* libPods-AriaFrittaNative-tvOSTests.a */,
+				D1139F24C706EA614F35140A /* libPods-AriaFrittaNativeTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42B90368241FE71F0060B0DE /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				42B90369241FE71F0060B0DE /* BridgeInfo.m */,
+				42B9036A241FE71F0060B0DE /* BridgeInfo.h */,
+			);
+			name = Info;
+			path = AriaFrittaNative/Info;
+			sourceTree = "<group>";
+		};
+		42B9036F241FF13B0060B0DE /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				42B90370241FF1580060B0DE /* Queue.h */,
+				42B90371241FF1650060B0DE /* Queue.m */,
+			);
+			name = Queue;
+			path = AriaFrittaNative/Queue;
+			sourceTree = "<group>";
+		};
+		42B90374241FF1CF0060B0DE /* Fcm */ = {
+			isa = PBXGroup;
+			children = (
+				42B90375241FF1F30060B0DE /* BridgeFcm.h */,
+				42B90376241FF2070060B0DE /* BridgeFcm.m */,
+			);
+			name = Fcm;
+			path = AriaFrittaNative/Fcm;
+			sourceTree = "<group>";
+		};
+		5D7DB12223D5D30C00A0E35D /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				352AEBC27F12442884D0BE5A /* libRangeSlider.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		5D7DB12323D5D30C00A0E35D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D7DB12723D5D30D00A0E35D /* libRangeSlider.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				12B96990A6224EDDB2CCC8EE /* RangeSlider.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				5D3F568B2371B47700639423 /* File.swift */,
+				13B07FAE1A68108700A75B9A /* AriaFrittaNative */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* AriaFrittaNativeTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				A84685387F5B75444CB223FD /* Pods */,
+				B9915C6D37B3418D9369529D /* Resources */,
+				5D3F568A2371B47600639423 /* AriaFrittaNative-Bridging-Header.h */,
+				5D7DB12223D5D30C00A0E35D /* Recovered References */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* AriaFrittaNative.app */,
+				00E356EE1AD99517003FC87E /* AriaFrittaNativeTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* AriaFrittaNative-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* AriaFrittaNative-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A84685387F5B75444CB223FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EC35B71345973ECFDD9FEEB /* Pods-AriaFrittaNative.debug.xcconfig */,
+				88296EECAA26F7FEAFBBF280 /* Pods-AriaFrittaNative.release.xcconfig */,
+				7A3F5314D832011130257868 /* Pods-AriaFrittaNative-tvOS.debug.xcconfig */,
+				26474C0C9842BBA3891611CD /* Pods-AriaFrittaNative-tvOS.release.xcconfig */,
+				CA39FD9224BB3CDD82E266CF /* Pods-AriaFrittaNative-tvOSTests.debug.xcconfig */,
+				BA0F12EB8120022A1DF4AE00 /* Pods-AriaFrittaNative-tvOSTests.release.xcconfig */,
+				83A01C37E0AE6B9BFAA2B2B1 /* Pods-AriaFrittaNativeTests.debug.xcconfig */,
+				D86B446C8CA2D64048AA3DDD /* Pods-AriaFrittaNativeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B9915C6D37B3418D9369529D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C22E90997BAE4B9EA33F6050 /* Nexa-Black.ttf */,
+				5D9CA2FB582F4ACCBA66D4E3 /* Nexa-BlackItalic.ttf */,
+				63C96C4A3122434697D1213B /* Nexa-Bold.ttf */,
+				7448B8AEA8E74129A162DF1E /* Nexa-BoldItalic.ttf */,
+				C7C9C224BC42491F9A669E5A /* Nexa-Book.ttf */,
+				507FD97E8F0647EE926CC910 /* Nexa-BookItalic.ttf */,
+				567948F2EC914EDF95570618 /* Nexa-Heavy.ttf */,
+				5542704B22AA46B38E612314 /* Nexa-HeavyItalic.ttf */,
+				FBCD3B32E9CC4F47AF03AA50 /* Nexa-Italic.ttf */,
+				F5985BFDAF394D1A8E0E808A /* Nexa-Light.ttf */,
+				218290ED63194FC29CA82173 /* Nexa-LightItalic.ttf */,
+				2CC715DA761F46B3BF652113 /* Nexa-Regular.ttf */,
+				0EAE40D1300A4EA597769907 /* Nexa-Thin.ttf */,
+				51AFA379DCAC469A8927A675 /* Nexa-ThinItalic.ttf */,
+				2A1E348EBAB14172B59A33B2 /* Nexa-XBold.ttf */,
+				0346770494074845987877E7 /* Nexa-XBoldItalic.ttf */,
+				FE3E9C1717C94C00ABA2CE56 /* Quicksand_Bold_Oblique.otf */,
+				12EFDE560FAE4ADFAF6708D6 /* Quicksand_Bold.otf */,
+				D7CEA85062FC466280A678B7 /* Quicksand_Book_Oblique.otf */,
+				ABCC94C783864A11A0CCCB8B /* Quicksand_Book.otf */,
+				42DA8E27B46B42A082C97DB3 /* Quicksand_Light_Oblique.otf */,
+				5EF54508CBB74E678A4EA8A0 /* Quicksand_Light.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* AriaFrittaNativeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AriaFrittaNativeTests" */;
+			buildPhases = (
+				903A0315D741E41FEC6BE918 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = AriaFrittaNativeTests;
+			productName = AriaFrittaNativeTests;
+			productReference = 00E356EE1AD99517003FC87E /* AriaFrittaNativeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* AriaFrittaNative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AriaFrittaNative" */;
+			buildPhases = (
+				2A0F5E1DAAB89639A9E34F30 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				1D5DAA45FD8834017B06AA75 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AriaFrittaNative;
+			productName = AriaFrittaNative;
+			productReference = 13B07F961A680F5B00A75B9A /* AriaFrittaNative.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E47A1E0B4A5D006451C7 /* AriaFrittaNative-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AriaFrittaNative-tvOS" */;
+			buildPhases = (
+				0B49EA2148E64A1F821B708D /* [CP] Check Pods Manifest.lock */,
+				FD10A7F122414F3F0027D42C /* Start Packager */,
+				2D02E4771E0B4A5D006451C7 /* Sources */,
+				2D02E4781E0B4A5D006451C7 /* Frameworks */,
+				2D02E4791E0B4A5D006451C7 /* Resources */,
+				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AriaFrittaNative-tvOS";
+			productName = "AriaFrittaNative-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* AriaFrittaNative-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E48F1E0B4A5D006451C7 /* AriaFrittaNative-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AriaFrittaNative-tvOSTests" */;
+			buildPhases = (
+				5EBF97DF29F5535E05D22845 /* [CP] Check Pods Manifest.lock */,
+				2D02E48C1E0B4A5D006451C7 /* Sources */,
+				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
+				2D02E48E1E0B4A5D006451C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
+			);
+			name = "AriaFrittaNative-tvOSTests";
+			productName = "AriaFrittaNative-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* AriaFrittaNative-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 940;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 433Q5XTU3S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = KHM5FN4LK5;
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+					};
+					2D02E47A1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+					};
+					2D02E48F1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AriaFrittaNative" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5D7DB12323D5D30C00A0E35D /* Products */;
+					ProjectRef = 12B96990A6224EDDB2CCC8EE /* RangeSlider.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* AriaFrittaNative */,
+				00E356ED1AD99517003FC87E /* AriaFrittaNativeTests */,
+				2D02E47A1E0B4A5D006451C7 /* AriaFrittaNative-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* AriaFrittaNative-tvOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5D7DB12723D5D30D00A0E35D /* libRangeSlider.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRangeSlider.a;
+			remoteRef = 5D7DB12623D5D30D00A0E35D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B9037A241FF3350060B0DE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				42B90379241FF3350060B0DE /* GoogleService-Info.plist in Resources */,
+				5FA833036A8744FEA1B974A6 /* Nexa-Black.ttf in Resources */,
+				04E4BDB6AE45470F93B30717 /* Nexa-BlackItalic.ttf in Resources */,
+				7AFEB71C2A1243E997D6BB28 /* Nexa-Bold.ttf in Resources */,
+				10324C3289A743BDB2E9C2C8 /* Nexa-BoldItalic.ttf in Resources */,
+				15C79808D9AF4445AB6103DB /* Nexa-Book.ttf in Resources */,
+				74A41E437E564E789395DA8F /* Nexa-BookItalic.ttf in Resources */,
+				AF15BBC06FA2480DA0181300 /* Nexa-Heavy.ttf in Resources */,
+				0AF0F4A5404E485E8016079E /* Nexa-HeavyItalic.ttf in Resources */,
+				18ACCA11EE62455CB1AF6916 /* Nexa-Italic.ttf in Resources */,
+				DD89B7900305499B87C8DBFB /* Nexa-Light.ttf in Resources */,
+				5DE98894FE674006A4C0B7AD /* Nexa-LightItalic.ttf in Resources */,
+				0CA12EDC52AB4961B3891868 /* Nexa-Regular.ttf in Resources */,
+				6E213A6D942A4CBF895DCF1F /* Nexa-Thin.ttf in Resources */,
+				0E0230EC615341EA8EE44D3F /* Nexa-ThinItalic.ttf in Resources */,
+				B373A07EE0244E0A8D54F062 /* Nexa-XBold.ttf in Resources */,
+				78551D15C2EB4AE8940995A0 /* Nexa-XBoldItalic.ttf in Resources */,
+				DE2D525F0D36472EAB76E1EE /* Quicksand_Bold_Oblique.otf in Resources */,
+				14F9C9162B2A4FB6B0C19F77 /* Quicksand_Bold.otf in Resources */,
+				2B24131677EC4822B6F30BF0 /* Quicksand_Book_Oblique.otf in Resources */,
+				6609EE5727BA462D8575BCC9 /* Quicksand_Book.otf in Resources */,
+				9DD21FB20CF9423D9762C5D0 /* Quicksand_Light_Oblique.otf in Resources */,
+				AE54002ADEA54EAB8D81A15A /* Quicksand_Light.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4791E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				42B9037B241FF3350060B0DE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B9037C241FF3350060B0DE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		0B49EA2148E64A1F821B708D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AriaFrittaNative-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D5DAA45FD8834017B06AA75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AriaFrittaNative/Pods-AriaFrittaNative-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AriaFrittaNative/Pods-AriaFrittaNative-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A0F5E1DAAB89639A9E34F30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AriaFrittaNative-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		5EBF97DF29F5535E05D22845 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AriaFrittaNative-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		903A0315D741E41FEC6BE918 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AriaFrittaNativeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F122414F3F0027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* AriaFrittaNativeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B90372241FF1650060B0DE /* Queue.m in Sources */,
+				42B9036B241FE71F0060B0DE /* BridgeInfo.m in Sources */,
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				5D3F568C2371B47700639423 /* File.swift in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				4298C9DD243A1D2D0058486D /* TouchVisualizer.m in Sources */,
+				42B90377241FF2070060B0DE /* BridgeFcm.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4771E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
+				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48C1E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCD954D1E0B4F2C00145EB5 /* AriaFrittaNativeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* AriaFrittaNative */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D02E47A1E0B4A5D006451C7 /* AriaFrittaNative-tvOS */;
+			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B07FB21A68108700A75B9A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = AriaFrittaNative;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A01C37E0AE6B9BFAA2B2B1 /* Pods-AriaFrittaNativeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 433Q5XTU3S;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-range-slider/ios/**",
+				);
+				INFOPLIST_FILE = AriaFrittaNativeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AriaFrittaNative.app/AriaFrittaNative";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D86B446C8CA2D64048AA3DDD /* Pods-AriaFrittaNativeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 433Q5XTU3S;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-range-slider/ios/**",
+				);
+				INFOPLIST_FILE = AriaFrittaNativeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AriaFrittaNative.app/AriaFrittaNative";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC35B71345973ECFDD9FEEB /* Pods-AriaFrittaNative.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AriaFrittaNative/BeautyOps.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = KHM5FN4LK5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-range-slider/ios/**",
+				);
+				INFOPLIST_FILE = AriaFrittaNative/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BVLinearGradient\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DoubleConversion\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Folly\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNCAsyncStorage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNCMaskedView\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNFastImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNGestureHandler\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNMagicMove\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNReanimated\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNSVG\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNScreens\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-ART\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-Core\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-DevSupport\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTActionSheet\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTAnimation\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTBlob\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTLinking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTNetwork\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTSettings\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTText\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTVibration\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTWebSocket\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsi\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsiexecutor\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsinspector\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImageWebPCoder\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/glog\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/libwebp\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/lottie-react-native\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/yoga\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ariafrittanative;
+				PRODUCT_NAME = AriaFrittaNative;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AriaFrittaNative-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88296EECAA26F7FEAFBBF280 /* Pods-AriaFrittaNative.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AriaFrittaNative/BeautyOps.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = KHM5FN4LK5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-range-slider/ios/**",
+				);
+				INFOPLIST_FILE = AriaFrittaNative/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BVLinearGradient\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DoubleConversion\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Folly\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNCAsyncStorage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNCMaskedView\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNFastImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNGestureHandler\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNMagicMove\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNReanimated\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNSVG\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNScreens\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-ART\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-Core\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-DevSupport\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTActionSheet\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTAnimation\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTBlob\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTLinking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTNetwork\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTSettings\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTText\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTVibration\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTWebSocket\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsi\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsiexecutor\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsinspector\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImageWebPCoder\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/glog\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/libwebp\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/lottie-react-native\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/yoga\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ariafrittanative;
+				PRODUCT_NAME = AriaFrittaNative;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AriaFrittaNative-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		2D02E4971E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A3F5314D832011130257868 /* Pods-AriaFrittaNative-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-range-slider/ios/**",
+				);
+				INFOPLIST_FILE = "AriaFrittaNative-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ariafrittanative;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		2D02E4981E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26474C0C9842BBA3891611CD /* Pods-AriaFrittaNative-tvOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-range-slider/ios/**",
+				);
+				INFOPLIST_FILE = "AriaFrittaNative-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ariafrittanative;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		2D02E4991E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA39FD9224BB3CDD82E266CF /* Pods-AriaFrittaNative-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-range-slider/ios/**",
+				);
+				INFOPLIST_FILE = "AriaFrittaNative-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AriaFrittaNative-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AriaFrittaNative-tvOS.app/AriaFrittaNative-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		2D02E49A1E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0F12EB8120022A1DF4AE00 /* Pods-AriaFrittaNative-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-range-slider/ios/**",
+				);
+				INFOPLIST_FILE = "AriaFrittaNative-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AriaFrittaNative-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AriaFrittaNative-tvOS.app/AriaFrittaNative-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AriaFrittaNativeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AriaFrittaNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AriaFrittaNative-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4971E0B4A5E006451C7 /* Debug */,
+				2D02E4981E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AriaFrittaNative-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4991E0B4A5E006451C7 /* Debug */,
+				2D02E49A1E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AriaFrittaNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
