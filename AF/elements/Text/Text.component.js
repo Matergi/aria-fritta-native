@@ -20,6 +20,7 @@ type Props = {
   onPress?: () => void,
   ellipsizeMode?: string,
   numberOfLines?: number,
+  textStyle?: any,
 };
 
 const fontFamilyAndroid = 'Nexa';
@@ -51,7 +52,13 @@ const TextElement = (props: Props) => {
     <Text
       ellipsizeMode={props.ellipsizeMode}
       numberOfLines={props.numberOfLines}
-      style={[styles.text, {fontSize}, theme.text, props.style]}
+      style={[
+        styles.text,
+        {fontSize},
+        theme.text,
+        !props.onPress && props.style,
+        props.textStyle,
+      ]}
       pointerEvents="none"
       onLayout={props.onLayout}>
       {props.children}
@@ -67,7 +74,11 @@ const TextElement = (props: Props) => {
   }
 
   if (props.onPress) {
-    TextToRender = <Press onPress={props.onPress}>{TextToRender}</Press>;
+    TextToRender = (
+      <Press style={props.style} onPress={props.onPress}>
+        {TextToRender}
+      </Press>
+    );
   }
 
   return TextToRender;

@@ -14,13 +14,13 @@ type Props = {
   screen: string,
 };
 
-const App = (props: Props) => {
+const App = ({screen}: Props) => {
   onRefreshToken(token => {});
   requestPermission();
   onReciveNotification(data => {});
   useEffect(() => {}, []);
 
-  return Router(props.screen);
+  return Router(screen);
 };
 
 const mapDispatchToProps = (dispatch: any) => {

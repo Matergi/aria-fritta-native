@@ -6,8 +6,7 @@ import {getBottomSpace} from 'react-native-iphone-x-helper';
 
 const heightStatusBar = getStatusBarHeight();
 
-const heightNavigationBar =
-  getStatusBarHeight() + (Dimensions.get('window').height / 100) * 5;
+const heightNavigationBar = 50;
 
 const topText =
   getStatusBarHeight() + (Dimensions.get('window').height / 100) * 5;
@@ -18,7 +17,7 @@ const topSpace = heightStatusBar + (Dimensions.get('window').height / 100) * 2;
 
 const heightConfirmButton = 60 + (bottomSpace === 0 ? 20 : bottomSpace);
 
-export {
+export default {
   heightStatusBar,
   heightNavigationBar,
   topText,

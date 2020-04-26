@@ -29,6 +29,14 @@ const locations = {
   findMyLocation,
 };
 
+import {Login, Signup, ConfirmPhoneNumber, InfoUser} from './Profile';
+
+import {
+  RecoverPassword,
+  ConfirmPhoneNumberForRecoverPassword,
+  ResetPassword,
+} from './RecoverPassword';
+
 export {
   locations,
   ChangeScreen,
@@ -38,4 +46,11 @@ export {
   deletePaymentMethod,
   OpenWebView,
   LoginWithFacebook,
+  Login,
+  Signup,
+  ConfirmPhoneNumber,
+  RecoverPassword,
+  ConfirmPhoneNumberForRecoverPassword,
+  InfoUser,
+  ResetPassword,
 };

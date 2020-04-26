@@ -22,6 +22,7 @@ import CreditCard from './CreditCard/CreditCard.component';
 import CreditCardEdit from './CreditCard/CreditCardEdit.component';
 import CropView from './CropView/CropView.component';
 import WebView from './WebView/WebView.component';
+import ScreenWithHeader from './ScreenWithHeader/ScreenWithHeader.component';
 
 export {
   Text,
@@ -48,4 +49,5 @@ export {
   CropView,
   WebView,
   DateTimeCustom,
+  ScreenWithHeader,
 };

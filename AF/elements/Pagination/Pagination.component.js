@@ -114,7 +114,7 @@ const Pagination = (props: Props) => {
             <Back />
           </View>
           <Text style={[props.styleTextBack, styles.text]}>
-            {strings.get('pagination.previous')}
+            {strings.get('pagination.back')}
           </Text>
         </Press>
         <Press
@@ -149,7 +149,9 @@ const Pagination = (props: Props) => {
             });
             if (indexPage === props.children.length - 1) {
               props.onFinish && props.onFinish();
-            } else if (await props.onNext(indexPage)) {
+            } else if (props.onNext && (await props.onNext(indexPage))) {
+              setIndexPage(indexPage + 1);
+            } else if (!props.onNext) {
               setIndexPage(indexPage + 1);
             }
           }}>
@@ -158,7 +160,9 @@ const Pagination = (props: Props) => {
           ) : (
             <>
               <Text style={[props.styleTextNext, styles.text]}>
-                {strings.get('pagination.next')}
+                {indexPage === props.children.length - 1
+                  ? strings.get('pagination.end')
+                  : strings.get('pagination.next')}
               </Text>
               <View style={styles.iconNext}>
                 <Next />
@@ -174,11 +178,10 @@ const Pagination = (props: Props) => {
               key={child.props.id}
               style={[
                 styles.point,
-                index <= indexPage &&
-                  props.activeColor && {
-                    backgroundColor: props.activeColor,
-                    borderColor: props.activeColor,
-                  },
+                index <= indexPage && {
+                  backgroundColor: props.activeColor ?? '#000000',
+                  borderColor: props.activeColor ?? '#000000',
+                },
               ]}
             />
           ))}

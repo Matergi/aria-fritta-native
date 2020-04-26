@@ -17,7 +17,7 @@ const PickerModal = (props: Props) => {
   const [county, setCountry] = useState(value);
 
   const countryFinded = items.find(
-    item => county.toLowerCase() === item.key.toLowerCase(),
+    item => county && county.toLowerCase() === item.key.toLowerCase(),
   );
   return (
     <View style={[styles.containerDatePicker]}>

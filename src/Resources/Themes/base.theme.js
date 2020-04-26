@@ -1,9 +1,14 @@
 // @flow strict
 
+type Screen = {
+  +backgroundColor: string,
+};
+
 export type Theme = {
   +colorAccent: string,
   +backgroundAccent: string,
   +shadow: any,
+  +screen: Screen,
 };
 
 const defaultTheme: Theme = {
@@ -18,6 +23,9 @@ const defaultTheme: Theme = {
     shadowOpacity: 0.18,
     shadowRadius: 7.49,
     elevation: 12,
+  },
+  screen: {
+    backgroundColor: '#ffffff',
   },
 };
 

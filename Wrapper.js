@@ -61,6 +61,8 @@ export default () => {
 
   const customScreen = undefined; // 'Test';
 
+  console.log(store.getState());
+
   return (
     <NavigationContainer ref={Dependencies.Navigation.navigationRef}>
       <Provider store={store}>

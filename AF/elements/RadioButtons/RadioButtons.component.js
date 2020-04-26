@@ -30,7 +30,7 @@ const RadioButtons = (props: Props) => {
           key={element.key}
           style={styles.radioButton}
           onPress={() => {
-            props.onChange(element.key);
+            props.onChange && props.onChange(element.key);
           }}>
           <View
             style={[

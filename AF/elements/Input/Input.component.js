@@ -5,7 +5,7 @@ import {StyleSheet, TextInput, View} from 'react-native';
 import {font} from '../Text/Text.component';
 
 type Props = {
-  style: any,
+  style?: any,
   color?: string,
   selectionColor?: string,
   underlineFocusColor?: string,
@@ -47,7 +47,7 @@ const InputComponent = (props: Props) => {
         ]}
         onChangeText={text => {
           onChangeText(text);
-          props.onChange(text);
+          props.onChange && props.onChange(text);
         }}
         value={props.value ? props.value : value}
         maxLength={props.maxLength}

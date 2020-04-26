@@ -2,7 +2,7 @@ import {modal, modalWithoutBackground} from './transitions';
 
 import {DateTimeModal, PickerModal, WebView} from 'elements';
 
-import {Test} from 'screens';
+import {Test, Login, Home, Signup, RecoverPassword} from 'screens';
 
 import screens from './index';
 
@@ -39,6 +39,22 @@ const routerScreens: Array<Screen> = [
     //   const {categoryId} = route.params;
     //   return [`category-image-${categoryId}`, `category-title-${categoryId}`];
     // },
+  },
+  {
+    router: screens.login,
+    ui: Login,
+  },
+  {
+    router: screens.home,
+    ui: Home,
+  },
+  {
+    router: screens.signup,
+    ui: Signup,
+  },
+  {
+    router: screens.recoverPassword,
+    ui: RecoverPassword,
   },
 ];
 

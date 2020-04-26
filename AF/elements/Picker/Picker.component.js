@@ -26,14 +26,14 @@ type Props = {
 
 const PickerComponent = (props: Props) => {
   return (
-    <View style={styles.container}>
-      <Press
-        style={styles.row}
-        onPress={() => {
-          Dependencies.Navigation.navigate(screens.pickerModal.id, {
-            ...props,
-          });
-        }}>
+    <Press
+      style={[styles.container, props.style]}
+      onPress={() => {
+        Dependencies.Navigation.navigate(screens.pickerModal.id, {
+          ...props,
+        });
+      }}>
+      <View style={styles.row}>
         {props.image && <Image style={styles.image} image={props.image} />}
         <Text
           style={[
@@ -44,7 +44,7 @@ const PickerComponent = (props: Props) => {
           ]}>
           {props.shown && props.shown !== '' ? props.shown : props.default}
         </Text>
-      </Press>
+      </View>
       <View
         style={[
           styles.underline,
@@ -53,16 +53,18 @@ const PickerComponent = (props: Props) => {
         ]}
       />
       <View />
-    </View>
+    </Press>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     height: 40,
+    position: 'relative',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   value: {
-    height: 22,
     marginTop: 8.5,
     textAlign: 'center',
     color: 'rgba(180, 180, 180, 1)',
@@ -71,7 +73,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     width: '100%',
     height: 1,
-    marginTop: 9,
+    position: 'absolute',
+    bottom: 0,
   },
   error: {
     backgroundColor: '#f00',
