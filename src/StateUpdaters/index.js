@@ -4,6 +4,7 @@ import {ChangeScreenForSideEffect, StartLoading, StopLoading} from './Screen';
 import {SetUser, SetInfoUser, SetToken} from './Profile';
 import {EditSignupInfo} from './Signup';
 import {EditRecoverPasswordInfo} from './RecoverPassword';
+import {AddItem, DeleteItem, DeleteAllItem} from './Item';
 
 export {
   ChangeScreenForSideEffect,
@@ -14,4 +15,7 @@ export {
   SetInfoUser,
   EditRecoverPasswordInfo,
   SetToken,
+  AddItem,
+  DeleteItem,
+  DeleteAllItem,
 };

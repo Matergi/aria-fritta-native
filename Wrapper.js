@@ -42,7 +42,7 @@ const enhancer = composeEnhancers(
   // other store enhancers if any
 );
 
-let enablePersistence = false;
+let enablePersistence = true;
 
 const store = createStore(
   enablePersistence ? persistedReducer : reducers,
@@ -60,8 +60,6 @@ export default () => {
   }
 
   const customScreen = undefined; // 'Test';
-
-  console.log(store.getState());
 
   return (
     <NavigationContainer ref={Dependencies.Navigation.navigationRef}>

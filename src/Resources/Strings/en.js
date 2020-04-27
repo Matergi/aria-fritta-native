@@ -13,6 +13,8 @@ export default {
   },
   home: {
     hi: 'Hi',
+    add: 'Add',
+    clear: 'Clear',
   },
   signup: {
     title: 'Signup',

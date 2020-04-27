@@ -2,6 +2,11 @@
 
 import type {ScreenName} from 'router';
 
+export type Item = {
+  key: string,
+  name: string,
+};
+
 export type RecoverPassword = {
   countryPhoneNumberKey: string,
   countryPhoneNumber: string,
@@ -46,5 +51,6 @@ export type State = {
   signup?: Signup,
   recoverPassword?: RecoverPassword,
   user?: User,
+  items: Array<Item>,
   loading?: string,
 };

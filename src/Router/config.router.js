@@ -2,7 +2,7 @@ import {modal, modalWithoutBackground} from './transitions';
 
 import {DateTimeModal, PickerModal, WebView} from 'elements';
 
-import {Test, Login, Home, Signup, RecoverPassword} from 'screens';
+import {Test, Login, Home, Signup, RecoverPassword, Detail} from 'screens';
 
 import screens from './index';
 
@@ -14,6 +14,7 @@ type Screen = {
 };
 
 const routerScreens: Array<Screen> = [
+  // Elements
   {
     router: screens.dateTimeModal,
     ui: DateTimeModal,
@@ -29,16 +30,11 @@ const routerScreens: Array<Screen> = [
     ui: WebView,
     navigationOptions: modal,
   },
+
+  // App
   {
     router: screens.test,
     ui: Test,
-    // sharedElementsConfig: (route, otherRoute, showing) => {
-    //   if (otherRoute.name === screens.appointmentConfiguration.id) {
-    //     return;
-    //   }
-    //   const {categoryId} = route.params;
-    //   return [`category-image-${categoryId}`, `category-title-${categoryId}`];
-    // },
   },
   {
     router: screens.login,
@@ -55,6 +51,18 @@ const routerScreens: Array<Screen> = [
   {
     router: screens.recoverPassword,
     ui: RecoverPassword,
+  },
+  {
+    router: screens.detail,
+    ui: Detail,
+    sharedElementsConfig: (route, otherRoute, showing) => {
+      // if (otherRoute.name === screens.appointmentConfiguration.id) {
+      //   return;
+      // }
+
+      const {detailId} = route.params ?? {};
+      return [`item-${detailId}`];
+    },
   },
 ];
 
