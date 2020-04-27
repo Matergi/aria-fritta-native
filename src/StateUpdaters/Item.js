@@ -32,7 +32,7 @@ export const DeleteItem = (key: string): Action => {
 
 export const DeleteAllItem = (): Action => {
   return {
-    type: 'DeleteItem',
+    type: 'DeleteAllItem',
     updateState: (state: State) => {
       return {...state, items: []};
     },

@@ -1,7 +1,7 @@
 // @flow
 
 import {ChangeScreenForSideEffect, StartLoading, StopLoading} from './Screen';
-import {SetUser, SetInfoUser, SetToken} from './Profile';
+import {SetUser, SetInfoUser, SetToken, LogoutForSideEffect} from './Profile';
 import {EditSignupInfo} from './Signup';
 import {EditRecoverPasswordInfo} from './RecoverPassword';
 import {AddItem, DeleteItem, DeleteAllItem} from './Item';
@@ -18,4 +18,5 @@ export {
   AddItem,
   DeleteItem,
   DeleteAllItem,
+  LogoutForSideEffect,
 };

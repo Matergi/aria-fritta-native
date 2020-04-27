@@ -14,7 +14,7 @@ export const SetUser = (user: User): Action => {
 
 export const SetInfoUser = (info: InfoUser): Action => {
   return {
-    type: 'SetUser',
+    type: 'SetInfoUser',
     updateState: (state: State) => {
       return {...state, user: {...state.user, info}};
     },
@@ -23,9 +23,18 @@ export const SetInfoUser = (info: InfoUser): Action => {
 
 export const SetToken = (token: string): Action => {
   return {
-    type: 'SetUser',
+    type: 'SetToken',
     updateState: (state: State) => {
       return {...state, user: {...state.user, token}};
+    },
+  };
+};
+
+export const LogoutForSideEffect = (): Action => {
+  return {
+    type: 'LogoutForSideEffect',
+    updateState: (state: State) => {
+      return {...state, user: undefined, items: []};
     },
   };
 };

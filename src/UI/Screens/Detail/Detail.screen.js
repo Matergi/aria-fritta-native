@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import {SafeAreaView, Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import Test from 'images/test.jpg';
 import {SharedElement} from 'react-navigation-shared-element';
 

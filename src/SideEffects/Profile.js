@@ -1,6 +1,6 @@
 // @flow
 
-import {SetUser, SetInfoUser} from 'StateUpdaters';
+import {SetUser, SetInfoUser, LogoutForSideEffect} from 'StateUpdaters';
 import {ChangeScreen} from 'SideEffects';
 import router from 'router';
 
@@ -32,5 +32,13 @@ export const ConfirmPhoneNumber = () => {
   return async (dispatch: any, getState: any, manager: Object) => {
     // api
     dispatch(ChangeScreen(router.home, {}, true));
+  };
+};
+
+export const Logout = () => {
+  return async (dispatch: any, getState: any, manager: Object) => {
+    // api
+    dispatch(LogoutForSideEffect());
+    dispatch(ChangeScreen(router.login, {}, true));
   };
 };

@@ -15,6 +15,7 @@ export default {
     hi: 'Hi',
     add: 'Add',
     clear: 'Clear',
+    logout: 'Logout',
   },
   signup: {
     title: 'Signup',

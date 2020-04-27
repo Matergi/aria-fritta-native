@@ -29,7 +29,7 @@ const locations = {
   findMyLocation,
 };
 
-import {Login, Signup, ConfirmPhoneNumber, InfoUser} from './Profile';
+import {Login, Signup, ConfirmPhoneNumber, InfoUser, Logout} from './Profile';
 
 import {
   RecoverPassword,
@@ -53,4 +53,5 @@ export {
   ConfirmPhoneNumberForRecoverPassword,
   InfoUser,
   ResetPassword,
+  Logout,
 };

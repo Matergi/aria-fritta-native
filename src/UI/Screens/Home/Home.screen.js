@@ -7,7 +7,7 @@ import {SharedElement} from 'react-navigation-shared-element';
 
 import {connect} from 'react-redux';
 import {AddItem, DeleteItem, DeleteAllItem} from 'StateUpdaters';
-import {ChangeScreen} from 'SideEffects';
+import {ChangeScreen, Logout} from 'SideEffects';
 
 import strings from 'strings';
 import screens from 'router';
@@ -23,6 +23,7 @@ type Props = {
   deleteItem: string => void,
   openDetail: string => void,
   deleteAllItem: () => void,
+  logout: () => void,
 };
 
 const HomeScreen = ({
@@ -32,18 +33,21 @@ const HomeScreen = ({
   deleteItem,
   openDetail,
   deleteAllItem,
+  logout,
 }: Props) => (
   <SafeAreaView style={styles.home}>
     <ScrollView>
-      <Text style={styles.name}>{`${strings.get('home.hi')} ${
-        user.name
-      }`}</Text>
+      <Text style={styles.name}>{`${strings.get('home.hi')} ${user &&
+        user.name}`}</Text>
       <View style={styles.actions}>
-        <Press style={styles.add} onPress={() => addItem('test')}>
+        <Press style={styles.action} onPress={() => addItem('test')}>
           <Text>{strings.get('home.add')}</Text>
         </Press>
-        <Press style={styles.add} onPress={() => deleteAllItem()}>
+        <Press style={styles.action} onPress={() => deleteAllItem()}>
           <Text>{strings.get('home.clear')}</Text>
+        </Press>
+        <Press style={styles.action} onPress={() => logout()}>
+          <Text>{strings.get('home.logout')}</Text>
         </Press>
       </View>
       {items.map(item => (
@@ -80,7 +84,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 200,
   },
-  add: {
+  action: {
     width: 100,
     height: 40,
     backgroundColor: 'grey',
@@ -107,6 +111,7 @@ const mapDispatchToProps = dispatch => ({
   openDetail: (id: string) =>
     dispatch(ChangeScreen(screens.detail, {detailId: id})),
   deleteAllItem: () => dispatch(DeleteAllItem()),
+  logout: () => dispatch(Logout()),
 });
 
 export default connect(
