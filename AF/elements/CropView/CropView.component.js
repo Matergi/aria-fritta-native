@@ -115,7 +115,7 @@ const CropViewComponent = forwardRef((props: Props, ref) => {
       });
       setDetailCrop({
         x: x / event.nativeEvent.zoomScale,
-        y: limitTop / event.nativeEvent.zoomScale,
+        y: 0,
         width: widthMask / event.nativeEvent.zoomScale,
         height: heightMask / event.nativeEvent.zoomScale,
         zoom: event.nativeEvent.zoomScale,
@@ -129,7 +129,7 @@ const CropViewComponent = forwardRef((props: Props, ref) => {
       });
       setDetailCrop({
         x: x / event.nativeEvent.zoomScale,
-        y: limitBottom / event.nativeEvent.zoomScale,
+        y: (limitBottom - limitTop) / event.nativeEvent.zoomScale,
         width: widthMask / event.nativeEvent.zoomScale,
         height: heightMask / event.nativeEvent.zoomScale,
         zoom: event.nativeEvent.zoomScale,
