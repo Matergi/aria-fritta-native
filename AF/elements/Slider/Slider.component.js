@@ -3,12 +3,7 @@
 import React, {useMemo} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {PanGestureHandler, State} from 'react-native-gesture-handler';
-import Animated, {
-  concat,
-  divide,
-  block,
-  onChange,
-} from 'react-native-reanimated';
+import Animated from 'react-native-reanimated';
 import {onGestureEvent, ReText} from 'react-native-redash';
 import Knob, {KNOB_WIDTH} from './Knob.component';
 
@@ -24,6 +19,10 @@ const {
   add,
   set,
   diffClamp,
+  concat,
+  divide,
+  block,
+  onChange,
 } = Animated;
 
 type Props = {
@@ -41,12 +40,13 @@ const withOffset = (state, value, defaultOffset) => {
   return block([
     cond(
       eq(state, State.END),
-      [set(offset, add(value, offset), offset)],
+      [set(offset, add(value, offset)), offset],
       add(value, offset),
     ),
   ]);
 };
 
+// for resolve bug in diffClamp follow this pull request https://github.com/software-mansion/react-native-reanimated/pull/746
 const Slider = (props: Props) => {
   const {state, translationX} = useMemo(
     () => ({
@@ -93,24 +93,19 @@ const Slider = (props: Props) => {
 
   useCode(
     () =>
-      onChange(
-        state,
-        cond(eq(state, State.END), [
-          set(state, State.UNDETERMINED),
-          call([percentage], ([percentageChanged]) => {
-            props.onChange && props.onChange(percentageChanged);
-          }),
-        ]),
-      ),
-    [],
-  );
-
-  useCode(
-    () =>
-      call([translateX], ([translateXD]) => {
-        console.log(`test: ${translateXD}`);
-      }),
-    [],
+      block([
+        call([translateX], ([]) => {}),
+        onChange(
+          state,
+          cond(eq(state, State.END), [
+            set(state, State.UNDETERMINED),
+            call([percentage], ([percentageChanged]) => {
+              props.onChange && props.onChange(percentageChanged);
+            }),
+          ]),
+        ),
+      ]),
+    [translateX],
   );
 
   return (
