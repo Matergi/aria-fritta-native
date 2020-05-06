@@ -11,14 +11,15 @@ export const KNOB_HEIGHT = 30;
 type Props = {
   state: Animated.Node,
   children?: any,
+  style?: any,
 };
 
-const Knob = ({state, children}: Props) => {
+const Knob = ({state, children, style}: Props) => {
   const opacityDuring = or(eq(state, State.ACTIVE), eq(state, State.BEGAN));
   const opacity = not(eq(state, State.ACTIVE), eq(state, State.BEGAN));
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <Animated.View
         style={[styles.knob, styles.knobChanging, {opacity: opacityDuring}]}
       />

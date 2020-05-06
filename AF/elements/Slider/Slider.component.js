@@ -5,7 +5,9 @@ import {View, StyleSheet} from 'react-native';
 import {PanGestureHandler, State} from 'react-native-gesture-handler';
 import Animated from 'react-native-reanimated';
 import {onGestureEvent, ReText} from 'react-native-redash';
-import Knob, {KNOB_WIDTH} from './Knob.component';
+import Knob, {KNOB_WIDTH, KNOB_HEIGHT} from './Knob.component';
+
+const SLIDER_HEIGHT = 5;
 
 const {
   Value,
@@ -107,7 +109,7 @@ const Slider = (props: Props) => {
           style={{
             transform: [{translateX: sub(translateX, KNOB_WIDTH / 2)}],
           }}>
-          <Knob state={state}>
+          <Knob style={styles.knob} state={state}>
             <ReText text={label} style={styles.label} />
           </Knob>
         </Animated.View>
@@ -119,6 +121,10 @@ const Slider = (props: Props) => {
 const styles = StyleSheet.create({
   container: {
     position: 'relative',
+    height: SLIDER_HEIGHT,
+  },
+  knob: {
+    marginTop: SLIDER_HEIGHT / 2 - KNOB_HEIGHT / 2,
   },
   left: {
     ...StyleSheet.absoluteFillObject,
