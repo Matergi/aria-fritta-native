@@ -15,7 +15,7 @@ class Language {
     refreshPage = refreshPageParam;
   };
 
-  static get = (key: string): string => {
+  static get = (key: string, variables?: Object): string => {
     if (test) {
       dict = internalizations.test;
     } else if (!dict) {
@@ -45,6 +45,13 @@ class Language {
     if (!value) {
       // eslint-disable-next-line no-alert
       alert(key + ' not found');
+    } else if (variables) {
+      Object.keys(variables).forEach(keyVariable => {
+        value = value.replace(
+          new RegExp(`{${keyVariable}}`, 'g'),
+          variables[keyVariable],
+        );
+      });
     }
 
     return value;
