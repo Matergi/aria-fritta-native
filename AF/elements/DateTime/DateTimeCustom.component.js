@@ -1,8 +1,7 @@
 // @flow
 
-import React, {Children} from 'react';
-import {View, StyleSheet} from 'react-native';
-import Text from '../Text';
+import React from 'react';
+import {View} from 'react-native';
 import Press from '../Press';
 import Dependencies from 'dependencies';
 import screens from 'router';
@@ -20,6 +19,8 @@ type Props = {
   color?: string,
   default?: string,
   children: any,
+  minimumDate?: any,
+  maximumDate?: any,
 };
 
 const DateTime = (props: Props) => {
@@ -30,6 +31,8 @@ const DateTime = (props: Props) => {
           Dependencies.Navigation.navigate(screens.dateTimeModal.id, {
             mode: props.mode,
             date: props.value && props.value.toDate(),
+            minimumDate: props.minimumDate && props.minimumDate.toDate(),
+            maximumDate: props.maximumDate && props.maximumDate.toDate(),
             save: (date: Date) => {
               props.onChange && props.onChange(moment(date));
             },
@@ -46,29 +49,5 @@ const DateTime = (props: Props) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    width: '100%',
-  },
-  date: {
-    marginTop: 4,
-    color: 'rgba(180, 180, 180, 1)',
-  },
-  underline: {
-    backgroundColor: '#000',
-    width: '100%',
-    height: 1,
-    marginTop: 9,
-  },
-  showDatePicker: {
-    position: 'absolute',
-    bottom: 0,
-  },
-  error: {
-    backgroundColor: '#f00',
-  },
-});
 
 export default DateTime;

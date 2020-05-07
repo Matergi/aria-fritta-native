@@ -14,7 +14,8 @@ type Props = {
 
 const DateTimeModal = (props: Props) => {
   const [pop, setPop] = useState(true);
-  const {dateParam, save, mode} = props.route.params ?? {};
+  const {dateParam, save, mode, minimumDate, maximumDate} =
+    props.route.params ?? {};
   const [date, setDate] = useState(dateParam ?? new Date());
 
   return (
@@ -43,6 +44,8 @@ const DateTimeModal = (props: Props) => {
         style={styles.dateTime}
         date={date}
         onDateChange={setDate}
+        minimumDate={minimumDate}
+        maximumDate={maximumDate}
       />
     </View>
   );
