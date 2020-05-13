@@ -49,11 +49,15 @@ const store = createStore(
   enhancer,
 );
 
+let persistor;
+
 export default () => {
   const [loaded, setLoad] = useState(false);
-  const persistor = persistStore(store, undefined, () => {
-    setLoad(true);
-  });
+  if (!persistor) {
+    persistor = persistStore(store, undefined, () => {
+      setLoad(true);
+    });
+  }
 
   if (!loaded && enablePersistence) {
     return <View />;
