@@ -3,7 +3,7 @@
 import React from 'react';
 import {Easing} from 'react-native';
 import {TapGestureHandler, State} from 'react-native-gesture-handler';
-import {onGestureEvent, bInterpolate} from 'react-native-redash';
+import {onGestureEvent} from 'react-native-redash';
 import Animated, {stopClock} from 'react-native-reanimated';
 import {useMemoOne} from 'use-memo-one';
 
@@ -23,12 +23,13 @@ const {
   clockRunning,
   not,
   and,
+  interpolate,
 } = Animated;
 
 type Props = {
   style?: any,
   children?: any,
-  scalable?: boolean,
+  scalable?: number,
   onPress?: any,
 };
 
@@ -88,9 +89,9 @@ const PressElement = ({onPress, style, children, scalable}: Props) => {
       scalable &&
       block([
         cond(eq(state, State.BEGAN), [
-          set(shouldScale, 1),
+          set(shouldScale, 0),
+          set(shouldOnPress, 0),
           startClock(clock),
-          set(shouldOnPress, 1),
         ]),
         cond(
           or(
@@ -99,6 +100,7 @@ const PressElement = ({onPress, style, children, scalable}: Props) => {
             eq(state, State.END),
           ),
           set(shouldScale, 0),
+          set(shouldOnPress, 0),
         ),
         onChange(state, [
           cond(
@@ -109,12 +111,7 @@ const PressElement = ({onPress, style, children, scalable}: Props) => {
               set(stateAnimation.finished, 0),
               set(configAnimation.toValue, 0),
               stopClock(clock),
-              cond(eq(shouldOnPress, 1), [
-                set(shouldOnPress, 0),
-                call([], ([]) => {
-                  onPress && onPress();
-                }),
-              ]),
+              cond(eq(shouldOnPress, 0), set(shouldOnPress, 1)),
             ],
             [
               set(stateAnimation.time, 0),
@@ -133,11 +130,20 @@ const PressElement = ({onPress, style, children, scalable}: Props) => {
           eq(shouldScale, 0),
           set(animation, runTiming(clock, stateAnimation, configAnimation)),
         ),
+        cond(and(eq(shouldOnPress, 1), eq(stateAnimation.position, 0)), [
+          set(shouldOnPress, 2),
+          call([], ([]) => {
+            onPress && onPress();
+          }),
+        ]),
       ]),
     [onPress],
   );
 
-  const scale = bInterpolate(animation, 1, 0.95);
+  const scale = interpolate(animation, {
+    inputRange: [0, 1],
+    outputRange: [1, 0.9],
+  });
 
   return (
     <TapGestureHandler {...gestureHandler}>
