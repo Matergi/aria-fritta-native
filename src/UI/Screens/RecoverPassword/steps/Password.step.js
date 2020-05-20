@@ -1,17 +1,19 @@
+// @flow
+
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Text, Input} from 'elements';
 
 import strings from 'strings';
 
-import type {Signup} from 'types';
+import type {RecoverPassword} from 'types';
 
 type Props = {
-  fields: Signup,
+  fields: RecoverPassword,
   onChangeField: (string, string) => Promise<any>,
 };
 
-export const hasError = (fields: Signup) => {
+export const hasError = (fields: RecoverPassword) => {
   const {password, repassword} = fields;
   if (!password || password.length === 0) {
     return 'password';
@@ -34,7 +36,9 @@ const PasswordStep = ({fields, onChangeField}: Props) => (
       underlineColor="grey"
       style={styles.input}
       value={fields.password}
-      onChange={value => onChangeField('password', value)}
+      onChange={value => {
+        onChangeField && onChangeField('password', value);
+      }}
     />
     <Text>{strings.get('signup.steps.baseInfo.repassword')}</Text>
     <Input
@@ -42,7 +46,9 @@ const PasswordStep = ({fields, onChangeField}: Props) => (
       underlineColor="grey"
       style={styles.input}
       value={fields.repassword}
-      onChange={value => onChangeField('repassword', value)}
+      onChange={value => {
+        onChangeField && onChangeField('repassword', value);
+      }}
     />
   </View>
 );

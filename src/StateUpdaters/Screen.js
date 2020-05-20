@@ -16,16 +16,19 @@ export const StartLoading = (id: string): Action => {
   return {
     type: 'StartLoading',
     updateState: (state: State) => {
-      return {...state, loading: id};
+      return {...state, loading: [...state.loading, id]};
     },
   };
 };
 
-export const StopLoading = (): Action => {
+export const StopLoading = (id: string): Action => {
   return {
     type: 'StopLoading',
     updateState: (state: State) => {
-      return {...state, loading: undefined};
+      return {
+        ...state,
+        loading: state.loading.filter(loadingId => loadingId !== id),
+      };
     },
   };
 };

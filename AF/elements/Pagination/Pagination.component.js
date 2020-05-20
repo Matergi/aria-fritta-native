@@ -20,6 +20,7 @@ import type {State} from 'types';
 import {screenBottomSpace} from 'dimensions';
 import Next from 'images/pagination/next.svg';
 import Back from 'images/pagination/back.svg';
+import dismissKeyboard from 'react-native-dismiss-keyboard';
 
 type Props = {
   children: any,
@@ -30,7 +31,7 @@ type Props = {
   styleButtonBack: any,
   styleTextNext: any,
   styleTextBack: any,
-  loading: boolean,
+  loading: Array<string>,
   activeColor?: string,
   shadow?: any,
 };
@@ -129,7 +130,7 @@ const Pagination = (props: Props) => {
             props.shadow && props.shadow,
           ]}
           onPress={async () => {
-            if (props.loading) {
+            if (props.loading.includes('next')) {
               return false;
             }
 
@@ -149,13 +150,16 @@ const Pagination = (props: Props) => {
             });
             if (indexPage === props.children.length - 1) {
               props.onFinish && props.onFinish();
+              dismissKeyboard();
             } else if (props.onNext && (await props.onNext(indexPage))) {
               setIndexPage(indexPage + 1);
+              dismissKeyboard();
             } else if (!props.onNext) {
               setIndexPage(indexPage + 1);
+              dismissKeyboard();
             }
           }}>
-          {props.loading ? (
+          {props.loading.includes('next') ? (
             <Lottie type="loading" />
           ) : (
             <>

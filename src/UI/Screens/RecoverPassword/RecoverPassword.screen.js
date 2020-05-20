@@ -24,7 +24,7 @@ import type {State, RecoverPassword} from 'types';
 
 type Props = {
   infoRecoverPassword: RecoverPassword,
-  editRecoverPasswordInfo: (string, string) => void,
+  editRecoverPasswordInfo: (string, string) => Promise<any>,
   recoverPassword: () => Promise<Boolean>,
   confirmPhoneNumber: () => Promise<Boolean>,
   resetPasswordSideEffect: () => Promise<any>,

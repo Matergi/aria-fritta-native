@@ -86,6 +86,7 @@ module.name_mapper='^facebook' ->'<PROJECT_ROOT>/AF/facebook'
 module.name_mapper='^lottiefiles' ->'<PROJECT_ROOT>/src/Resources/Lottiefiles'
 module.name_mapper='^countriesNumber' ->'<PROJECT_ROOT>/src/Resources/CountriesNumber'
 module.name_mapper='^countriesVat' ->'<PROJECT_ROOT>/src/Resources/CountriesVat'
+module.name_mapper='^locale' ->'<PROJECT_ROOT>/AF/locale'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe

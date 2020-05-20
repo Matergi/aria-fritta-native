@@ -37,6 +37,7 @@
     "react-native-animatable": "^1.3.3",
     "react-native-confirmation-code-field": "^5.0.0",
     "react-native-date-picker": "^2.7.8",
+    "react-native-dismiss-keyboard": "^1.0.0",
     "react-native-fast-image": "^7.0.2",
     "react-native-fbsdk": "^1.1.1",
     "react-native-gesture-handler": "^1.6.1",

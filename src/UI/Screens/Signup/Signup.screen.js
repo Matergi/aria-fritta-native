@@ -24,7 +24,7 @@ import type {State, Signup} from 'types';
 
 type Props = {
   infoSignup: Signup,
-  editSignupInfo: (string, string) => void,
+  editSignupInfo: (string, string) => Promise<any>,
   signup: () => Promise<Boolean>,
   confirmPhoneNumber: () => Promise<any>,
 };

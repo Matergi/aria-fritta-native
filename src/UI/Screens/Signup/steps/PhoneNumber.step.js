@@ -1,11 +1,12 @@
+// @flow
+
 import React, {useState} from 'react';
 import {View, StyleSheet, NativeModules} from 'react-native';
 import {Text, Input, Picker} from 'elements';
 import CountriesNumber from 'countriesNumber';
+import {getCountry} from 'locale';
 
 import strings from 'strings';
-
-const BridgeInfo = NativeModules.BridgeInfo;
 
 import type {Signup} from 'types';
 
@@ -28,7 +29,7 @@ export const hasError = (fields: Signup) => {
 
 const PhoneNumberStep = ({fields, onChangeField}: Props) => {
   const [country, setCountry] = useState(undefined);
-  BridgeInfo.getCountry()
+  getCountry()
     .then(countryPhone => setCountry(countryPhone))
     .catch(() => setCountry(''));
 
@@ -92,7 +93,9 @@ const PhoneNumberStep = ({fields, onChangeField}: Props) => {
           underlineColor="grey"
           style={styles.input}
           value={fields.phoneNumber}
-          onChange={value => onChangeField('phoneNumber', value)}
+          onChange={value => {
+            onChangeField && onChangeField('phoneNumber', value);
+          }}
         />
       </View>
     </View>

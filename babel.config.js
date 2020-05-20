@@ -26,6 +26,7 @@ module.exports = {
           lottiefiles: './src/Resources/Lottiefiles',
           countriesNumber: './src/Resources/CountriesNumber',
           countriesVat: './src/Resources/CountriesVat',
+          locale: './AF/locale',
         },
       },
     ],

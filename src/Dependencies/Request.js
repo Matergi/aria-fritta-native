@@ -159,7 +159,7 @@ export default async (detail: DetailRequest): Promise<any> => {
 
   const result = await fetch(url, options);
   const response = await result.json();
-  detail.dispatch && detail.dispatch(StopLoading());
+  detail.dispatch && detail.dispatch(StopLoading(detail.loadingId));
 
   console.log(response);
 

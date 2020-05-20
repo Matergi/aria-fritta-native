@@ -32,27 +32,27 @@ const LoginScreen = ({
   const [password, setPassword] = useState('');
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.page}>
+      <Text style={styles.title}>{strings.get('login.welcomeBack')}</Text>
       <View style={styles.container}>
-        <View style={styles.bottomActions}>
-          <Text
-            style={[styles.bottomActionItem, styles.bottomActionItemLeft]}
-            textStyle={styles.underline}
-            onPress={() => {
-              openSignup();
-            }}>
-            {strings.get('login.signup')}
-          </Text>
-          <Text
-            style={[styles.bottomActionItem, styles.bottomActionItemRight]}
-            textStyle={styles.underline}
-            onPress={() => {
-              openRecoverPassword();
-            }}>
-            {strings.get('login.forgotPassword')}
-          </Text>
-        </View>
-        <View style={styles.spaceFromActionAndCircularSection} />
+        <Text>{strings.get('login.email')}</Text>
+        <Input
+          style={styles.input}
+          underline
+          underlineColor={'grey'}
+          onChange={setEmail}
+          value={email}
+        />
+        <View style={styles.spaceFromInput} />
+        <Text>{strings.get('login.password')}</Text>
+        <Input
+          style={styles.input}
+          underline
+          underlineColor={'grey'}
+          onChange={setPassword}
+          value={password}
+        />
+        <View style={styles.circularSectionAndForm} />
         <View style={styles.circularSection}>
           <Press
             style={styles.circularItem}
@@ -69,36 +69,38 @@ const LoginScreen = ({
             <NextIcon style={styles.icon} />
           </Press>
         </View>
-        <View style={styles.circularSectionAndForm} />
-        <Input
-          style={styles.input}
-          underline
-          underlineColor={'grey'}
-          onChange={setPassword}
-          value={password}
-        />
-        <Text>{strings.get('login.password')}</Text>
-        <View style={styles.spaceFromInput} />
-        <Input
-          style={styles.input}
-          underline
-          underlineColor={'grey'}
-          onChange={setEmail}
-          value={email}
-        />
-        <Text>{strings.get('login.email')}</Text>
-        <Text style={styles.title}>{strings.get('login.welcomeBack')}</Text>
+        <View style={styles.spaceFromActionAndCircularSection} />
+        <View style={styles.bottomActions}>
+          <Text
+            style={[styles.bottomActionItem, styles.bottomActionItemLeft]}
+            textStyle={styles.underline}
+            onPress={() => {
+              openSignup();
+            }}>
+            {strings.get('login.signup')}
+          </Text>
+          <Text
+            style={[styles.bottomActionItem]}
+            textStyle={[styles.underline, styles.bottomActionItemRight]}
+            onPress={() => {
+              openRecoverPassword();
+            }}>
+            {strings.get('login.forgotPassword')}
+          </Text>
+        </View>
       </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'column',
+  },
   container: {
     width: '100%',
     height: '100%',
     padding: 30,
-    flexDirection: 'column-reverse',
   },
   bottomActions: {
     width: '100%',
@@ -116,9 +118,10 @@ const styles = StyleSheet.create({
   },
   bottomActionItemRight: {
     textAlign: 'right',
+    width: '100%',
   },
   spaceFromActionAndCircularSection: {
-    height: '15%',
+    height: 50,
   },
   circularSection: {
     flexDirection: 'row',
@@ -134,21 +137,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   circularSectionAndForm: {
-    height: '5%',
+    height: 50,
   },
   input: {
     height: 50,
     letterSpacing: 50,
   },
   spaceFromInput: {
-    height: '4%',
+    height: 20,
   },
   icon: {
     transform: [{scale: 0.6}],
   },
   title: {
-    position: 'absolute',
-    top: '10%',
+    marginTop: 50,
     left: 30,
     fontWeight: '600',
     fontSize: 35,

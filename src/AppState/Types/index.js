@@ -52,5 +52,5 @@ export type State = {
   recoverPassword?: RecoverPassword,
   user?: User,
   items: Array<Item>,
-  loading?: string,
+  loading: Array<string>,
 };

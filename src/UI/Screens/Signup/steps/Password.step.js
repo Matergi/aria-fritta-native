@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Text, Input} from 'elements';
@@ -34,7 +36,9 @@ const PasswordStep = ({fields, onChangeField}: Props) => (
       underlineColor="grey"
       style={styles.input}
       value={fields.password}
-      onChange={value => onChangeField('password', value)}
+      onChange={value => {
+        onChangeField && onChangeField('password', value);
+      }}
     />
     <Text>{strings.get('signup.steps.baseInfo.repassword')}</Text>
     <Input
@@ -42,7 +46,9 @@ const PasswordStep = ({fields, onChangeField}: Props) => (
       underlineColor="grey"
       style={styles.input}
       value={fields.repassword}
-      onChange={value => onChangeField('repassword', value)}
+      onChange={value => {
+        onChangeField && onChangeField('repassword', value);
+      }}
     />
   </View>
 );

@@ -1,8 +1,9 @@
 // @flow
 
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
 import Text, {font} from '../Text/Text.component';
+import rnTextSize, {TSFontSpecs} from 'react-native-text-size';
 
 type Rule = {
   length: number,
@@ -29,6 +30,7 @@ type Props = {
   separator: string, // /
   charWidth: number,
   editable: boolean,
+  fontScaling?: boolean,
 };
 
 const InputSplittedComponent = (props: Props) => {
@@ -40,11 +42,35 @@ const InputSplittedComponent = (props: Props) => {
     refs.push(useRef());
   }
 
+  TextInput.defaultProps = TextInput.defaultProps || {};
+  TextInput.defaultProps.allowFontScaling = props.fontScaling;
+
+  const fontSpecs: TSFontSpecs = {
+    fontFamily: font.fontFamily,
+    fontSize: props.style && props.style.fontSize ? props.style.fontSize : 16,
+    fontStyle: props.style && props.style.fontStyle,
+    fontWeight: props.style && props.style.fontWeight,
+  };
+
+  const [minHeight, setMinHeight] = useState(0);
+  const calcMinHeight = async () => {
+    const size = await rnTextSize.measure({
+      text: 'A',
+      width: 100,
+      ...fontSpecs,
+    });
+    setMinHeight(size.height);
+  };
+
+  useEffect(() => {
+    calcMinHeight();
+  }, [props.children]);
+
   return (
     <View style={props.style}>
       <View style={styles.row}>
         {props.rules.map((rule, index) => (
-          <View key={rule.id} style={styles.row}>
+          <View key={rule.id} style={[{minHeight: minHeight * 2}, styles.row]}>
             {index > 0 && <Text>{props.separator}</Text>}
             <TextInput
               ref={refs[index]}
@@ -116,6 +142,7 @@ const InputSplittedComponent = (props: Props) => {
 
 InputSplittedComponent.defaultProps = {
   editable: true,
+  fontScaling: false,
 };
 
 const styles = StyleSheet.create({
@@ -134,6 +161,7 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
+    alignItems: 'center',
   },
 });
 

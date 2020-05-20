@@ -4,12 +4,12 @@ import {Dimensions, Platform} from 'react-native';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
 import {getBottomSpace} from 'react-native-iphone-x-helper';
 
-const heightStatusBar = getStatusBarHeight();
+const heightStatusBar = getStatusBarHeight(true);
 
 const heightNavigationBar = 50;
 
 const topText =
-  getStatusBarHeight() + (Dimensions.get('window').height / 100) * 5;
+  getStatusBarHeight(true) + (Dimensions.get('window').height / 100) * 5;
 
 const bottomSpace = Platform.OS === 'ios' ? getBottomSpace() : 20;
 

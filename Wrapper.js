@@ -12,7 +12,7 @@ import thunk from 'redux-thunk';
 import Dependencies from 'dependencies';
 import LaunchNavigator from 'react-native-launch-navigator';
 if (Platform.OS === 'android') {
-  LaunchNavigator.setGoogleApiKey('your_api_key');
+  LaunchNavigator.setGoogleApiKey(Dependencies.googleConfig.places_api_key);
 }
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';

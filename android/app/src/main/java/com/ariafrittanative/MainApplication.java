@@ -3,6 +3,7 @@ package com.ariafrittanative;
 import android.app.Application;
 
 import com.ariafrittanative.fcm.FCMPackage;
+import com.ariafrittanative.info.InfoPackage;
 import com.ariafrittanative.queue.QueuePackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
       // Packages that cannot be autolinked yet can be added manually here, for example:
       packages.add(new QueuePackage());
       packages.add(new FCMPackage());
+      packages.add(new InfoPackage());
       return packages;
     }
 

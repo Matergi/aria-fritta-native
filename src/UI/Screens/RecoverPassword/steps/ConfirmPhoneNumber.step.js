@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Text} from 'elements';
@@ -10,16 +12,16 @@ import {
 
 import strings from 'strings';
 
-import type {Signup} from 'types';
+import type {RecoverPassword} from 'types';
 
 type Props = {
-  fields: Signup,
+  fields: RecoverPassword,
   onChangeField: (string, string) => Promise<any>,
 };
 
 const CELL_COUNT = 5;
 
-export const hasError = (fields: Signup) => {
+export const hasError = (fields: RecoverPassword) => {
   const {verificationNumber} = fields;
   if (!verificationNumber || verificationNumber.length !== 5) {
     return 'verificationNumber';

@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Text, Input, DateTime, RadioButtons} from 'elements';
@@ -47,7 +49,9 @@ const BaseInfoStep = ({fields, onChangeField}: Props) => (
       underlineColor="grey"
       style={styles.input}
       value={fields.name}
-      onChange={value => onChangeField('name', value)}
+      onChange={value => {
+        onChangeField && onChangeField('name', value);
+      }}
     />
     <Text>{strings.get('signup.steps.baseInfo.surname')}</Text>
     <Input
@@ -55,7 +59,9 @@ const BaseInfoStep = ({fields, onChangeField}: Props) => (
       underlineColor="grey"
       style={styles.input}
       value={fields.surname}
-      onChange={value => onChangeField('surname', value)}
+      onChange={value => {
+        onChangeField && onChangeField('surname', value);
+      }}
     />
     <Text>{strings.get('signup.steps.baseInfo.email')}</Text>
     <Input
@@ -63,7 +69,9 @@ const BaseInfoStep = ({fields, onChangeField}: Props) => (
       underlineColor="grey"
       style={styles.input}
       value={fields.email}
-      onChange={value => onChangeField('email', value)}
+      onChange={value => {
+        onChangeField && onChangeField('email', value);
+      }}
     />
     <Text>{strings.get('signup.steps.baseInfo.birthdate')}</Text>
     <DateTime
@@ -73,14 +81,18 @@ const BaseInfoStep = ({fields, onChangeField}: Props) => (
       style={styles.input}
       default={strings.get('signup.steps.baseInfo.birthdatePlaceHolder')}
       value={fields.birthdate && moment(fields.birthdate)}
-      onChange={value => onChangeField('birthdate', value.format('YYYY-MM-DD'))}
+      onChange={value => {
+        onChangeField && onChangeField('birthdate', value.format('YYYY-MM-DD'));
+      }}
     />
     <Text>{strings.get('signup.steps.baseInfo.gender')}</Text>
     <RadioButtons
       style={styles.radioButton}
       elements={[{key: 'M', value: 'M'}, {key: 'F', value: 'F'}]}
       value={fields.gender}
-      onChange={value => onChangeField('gender', value)}
+      onChange={value => {
+        onChangeField && onChangeField('gender', value);
+      }}
     />
   </View>
 );
