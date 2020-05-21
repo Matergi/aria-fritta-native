@@ -4,7 +4,6 @@ import React, {useState, useContext, useEffect} from 'react';
 import {StyleSheet, Text, Platform, View, Dimensions} from 'react-native';
 import Press from '../Press';
 import ThemeContext from 'themes';
-import rnTextSize, {TSFontSpecs} from 'react-native-text-size';
 
 const padding = (Dimensions.get('window').height / 100) * 0.4;
 
@@ -53,34 +52,11 @@ const TextElement = (props: Props) => {
   Text.defaultProps = Text.defaultProps || {};
   Text.defaultProps.allowFontScaling = props.fontScaling;
 
-  const fontSpecs: TSFontSpecs = {
-    fontFamily: font.fontFamily,
-    fontSize:
-      props.style && props.style.fontSize ? props.style.fontSize : fontSize,
-    fontStyle: props.style && props.style.fontStyle,
-    fontWeight: props.style && props.style.fontWeight,
-  };
-
-  const [minHeight, setMinHeight] = useState(0);
-  const calcMinHeight = async () => {
-    const size = await rnTextSize.measure({
-      text: 'A',
-      width: 100,
-      ...fontSpecs,
-    });
-    setMinHeight(size.height);
-  };
-
-  useEffect(() => {
-    calcMinHeight();
-  }, [props.children]);
-
   let TextToRender = (
     <Text
       ellipsizeMode={props.ellipsizeMode}
       numberOfLines={props.numberOfLines}
       style={[
-        {minHeight},
         styles.text,
         {fontSize},
         theme.text,
@@ -120,6 +96,7 @@ export const font =
 const styles = StyleSheet.create({
   text: {
     ...font,
+    padding: 0,
   },
   wrapUnderline: {
     flexDirection: 'column',

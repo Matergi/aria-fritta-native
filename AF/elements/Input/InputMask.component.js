@@ -4,7 +4,6 @@ import React, {useState, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {font} from '../Text/Text.component';
 import {TextInputMask} from 'react-native-masked-text';
-import rnTextSize, {TSFontSpecs} from 'react-native-text-size';
 
 type Props = {
   style: any,
@@ -29,27 +28,6 @@ type Props = {
 const InputMaskComponent = (props: Props) => {
   const [value, onChangeText] = useState(props.value ? props.value : '');
 
-  const fontSpecs: TSFontSpecs = {
-    fontFamily: font.fontFamily,
-    fontSize: props.style && props.style.fontSize ? props.style.fontSize : 16,
-    fontStyle: props.style && props.style.fontStyle,
-    fontWeight: props.style && props.style.fontWeight,
-  };
-
-  const [minHeight, setMinHeight] = useState(0);
-  const calcMinHeight = async () => {
-    const size = await rnTextSize.measure({
-      text: 'A',
-      width: 100,
-      ...fontSpecs,
-    });
-    setMinHeight(size.height);
-  };
-
-  useEffect(() => {
-    calcMinHeight();
-  }, [props.children]);
-
   return (
     <View style={props.style}>
       <TextInputMask
@@ -63,7 +41,6 @@ const InputMaskComponent = (props: Props) => {
         placeholder={props.placeholder}
         keyboardType={props.keyboard}
         style={[
-          {minHeight: minHeight * 2},
           props.underline && props.underlineColor && styles.inputBottomLine,
           props.underline &&
             props.underlineColor && {
@@ -98,6 +75,7 @@ const styles = StyleSheet.create({
   input: {
     height: '100%',
     fontSize: 16,
+    padding: 0,
   },
   error: {
     borderBottomColor: '#f00',
