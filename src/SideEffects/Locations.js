@@ -1,21 +1,5 @@
 // @flow
 
-export const tips = (input: string, uuidSession: string) => {
-  return (dispatch: any, getState: any, manager: Object) => {
-    return manager.Request({
-      url: 'https://maps.googleapis.com/maps/api/place/autocomplete/json',
-      method: 'GET',
-      query: {
-        input,
-        key: manager.googleConfig.places_api_key,
-        types: 'address',
-        sessiontoken: uuidSession,
-      },
-      disableCheck: true,
-    });
-  };
-};
-
 export const geocodingWithId = (placeid: string) => {
   return (dispatch: any, getState: any, manager: Object) => {
     return manager.Request({

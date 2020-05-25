@@ -18,6 +18,8 @@ import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 
 import reducers from 'reducers';
+import createSagaMiddleware from 'redux-saga';
+import SagaEffects from 'SagaEffects';
 
 import {ThemeComponent} from 'themes';
 
@@ -37,9 +39,10 @@ const composeEnhancers =
       })
     : compose;
 
+const sagaMiddleware = createSagaMiddleware();
+
 const enhancer = composeEnhancers(
-  applyMiddleware(thunk.withExtraArgument(Dependencies)),
-  // other store enhancers if any
+  applyMiddleware(thunk.withExtraArgument(Dependencies), sagaMiddleware),
 );
 
 let enablePersistence = true;
@@ -48,6 +51,8 @@ const store = createStore(
   enablePersistence ? persistedReducer : reducers,
   enhancer,
 );
+
+sagaMiddleware.run(SagaEffects);
 
 let persistor;
 

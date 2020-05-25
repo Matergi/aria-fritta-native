@@ -27,6 +27,7 @@ module.exports = {
           countriesNumber: './src/Resources/CountriesNumber',
           countriesVat: './src/Resources/CountriesVat',
           locale: './AF/locale',
+          SagaEffects: './src/SagaEffects',
         },
       },
     ],

@@ -9,12 +9,7 @@ import {
   deletePaymentMethod,
 } from './Stripe';
 
-import {
-  tips,
-  geocodingWithId,
-  reverseGeocoding,
-  findMyLocation,
-} from './Locations';
+import {geocodingWithId, reverseGeocoding, findMyLocation} from './Locations';
 
 import {ChangeScreen, BackScreen} from './Screen';
 
@@ -23,7 +18,6 @@ import {OpenWebView} from './WebView';
 import {LoginWithFacebook} from './Facebook';
 
 const locations = {
-  tips,
   geocodingWithId,
   reverseGeocoding,
   findMyLocation,
