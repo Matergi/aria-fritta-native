@@ -13,7 +13,6 @@ export const graphql = {
 
 export const http = {
   base_url: '',
-  base_url_public: '',
 };
 
 export const stripe = {
