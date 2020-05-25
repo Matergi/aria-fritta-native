@@ -15,7 +15,6 @@ export default {
   Navigation,
   ApolloClient: Apollo(graphql),
   baseUrl: http.base_url,
-  baseUrlPublic: http.base_url_public,
   stripeConfig: stripe,
   googleConfig: google,
 };
