@@ -10,12 +10,25 @@ import {connect} from 'react-redux';
 import Router from 'router/Router.component';
 import messaging from '@react-native-firebase/messaging';
 import crashlytics from '@react-native-firebase/crashlytics';
+import ErrorUtils from 'ErrorUtils';
+import {SourceMapResolver} from 'tools';
 
-const defaultHandler = global.ErrorUtils.getGlobalHandler();
+const defaultGlobalHandler = ErrorUtils.getGlobalHandler();
 
-global.ErrorUtils.setGlobalHandler((error, isFatal) => {
-  crashlytics().log(JSON.stringify(error, Object.getOwnPropertyNames(error)));
-  defaultHandler.apply(this, error, isFatal);
+global.ErrorUtils.setGlobalHandler(async (error, isFatal) => {
+  if (__DEV__) {
+    console.error(error);
+  }
+  try {
+    crashlytics().log('pre resolve stacktracer');
+    crashlytics().log(JSON.stringify(error, Object.getOwnPropertyNames(error)));
+    const stack = await SourceMapResolver.stackTrace(error);
+    crashlytics().log('after resolve stacktracer');
+    crashlytics().log(JSON.stringify(stack));
+  } catch (errorProcess) {
+    crashlytics().log(JSON.stringify(errorProcess));
+  }
+  defaultGlobalHandler(error, isFatal);
 });
 
 type Props = {
@@ -30,6 +43,7 @@ const App = ({screen}: Props) => {
       console.log('Permission settings:', settings);
     }
   };
+  requestPermission();
 
   useEffect(() => {
     messaging()
