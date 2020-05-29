@@ -46,3 +46,38 @@ const client = (config: Config) => {
 };
 
 export default client;
+
+/*
+Example:
+
+workingDirectory: SideEffects/
+
+import gql from "graphql-tag";
+
+export const LoginCustomer = () => {
+  return async (dispatch: any, getState: function, manager: Object) => {
+    const data = {
+      username: "username",
+      password: "password",
+    };
+    const LOGIN = `
+        mutation {
+          loginCustomer(
+            username: "${data.username}"
+            password: "${data.password}"
+          ) {
+            token
+            firstName
+            lastName
+            phone
+          }
+      }
+    `;
+
+    const result = await manager.ApolloClient.mutate({
+      mutation: gql(LOGIN)
+    });
+    return result.data.loginCustomer;
+  };
+};
+*/
