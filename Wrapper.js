@@ -23,6 +23,8 @@ import SagaEffects from 'SagaEffects';
 
 import {ThemeComponent} from 'themes';
 
+import {SourceMapResolver} from 'tools';
+
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
@@ -59,7 +61,12 @@ let persistor;
 export default () => {
   const [loaded, setLoad] = useState(false);
   if (!persistor) {
-    persistor = persistStore(store, undefined, () => {
+    persistor = persistStore(store, undefined, async () => {
+      try {
+        await SourceMapResolver.createSourceMapper();
+      } catch (e) {
+        console.error(e);
+      }
       setLoad(true);
     });
   }

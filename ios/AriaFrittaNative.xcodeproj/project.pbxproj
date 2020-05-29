@@ -28,6 +28,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* AriaFrittaNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AriaFrittaNativeTests.m */; };
+		4267941024814B3A00ADEAC5 /* sourcemap.app.json in Resources */ = {isa = PBXBuildFile; fileRef = 4267940F24814B3900ADEAC5 /* sourcemap.app.json */; };
 		4298C9DD243A1D2D0058486D /* TouchVisualizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298C9DC243A1D2D0058486D /* TouchVisualizer.m */; };
 		42B9036B241FE71F0060B0DE /* BridgeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B90369241FE71F0060B0DE /* BridgeInfo.m */; };
 		42B90372241FF1650060B0DE /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B90371241FF1650060B0DE /* Queue.m */; };
@@ -100,6 +101,7 @@
 		2D02E4901E0B4A5D006451C7 /* AriaFrittaNative-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AriaFrittaNative-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		352AEBC27F12442884D0BE5A /* libRangeSlider.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRangeSlider.a; sourceTree = "<group>"; };
 		420DA7FA242ED4EC00CD16BC /* libreact-native-image-resizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-image-resizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4267940F24814B3900ADEAC5 /* sourcemap.app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sourcemap.app.json; sourceTree = "<group>"; };
 		4298C9DC243A1D2D0058486D /* TouchVisualizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchVisualizer.m; path = AriaFrittaNative/TouchVisualizer.m; sourceTree = "<group>"; };
 		4298C9DE243A1D410058486D /* TouchVisualizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TouchVisualizer.h; path = AriaFrittaNative/TouchVisualizer.h; sourceTree = "<group>"; };
 		42B90369241FE71F0060B0DE /* BridgeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeInfo.m; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				4267940F24814B3900ADEAC5 /* sourcemap.app.json */,
 				5D3F568B2371B47700639423 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* AriaFrittaNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -385,6 +388,7 @@
 				1D5DAA45FD8834017B06AA75 /* [CP] Copy Pods Resources */,
 				72C5286BED74D505AD000E92 /* [CP-User] [RNFB] Core Configuration */,
 				6B7E693A43EA2B4A634BA5AF /* [CP-User] [RNFB] Crashlytics Configuration */,
+				426794122481531800ADEAC5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -520,6 +524,7 @@
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				42B90379241FF3350060B0DE /* GoogleService-Info.plist in Resources */,
 				5FA833036A8744FEA1B974A6 /* Nexa-Black.ttf in Resources */,
+				4267941024814B3A00ADEAC5 /* sourcemap.app.json in Resources */,
 				04E4BDB6AE45470F93B30717 /* Nexa-BlackItalic.ttf in Resources */,
 				7AFEB71C2A1243E997D6BB28 /* Nexa-Bold.ttf in Resources */,
 				10324C3289A743BDB2E9C2C8 /* Nexa-BoldItalic.ttf in Resources */,
@@ -653,6 +658,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		426794122481531800ADEAC5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		5EBF97DF29F5535E05D22845 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

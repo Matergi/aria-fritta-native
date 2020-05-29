@@ -12,24 +12,34 @@ import messaging from '@react-native-firebase/messaging';
 import crashlytics from '@react-native-firebase/crashlytics';
 import ErrorUtils from 'ErrorUtils';
 import {SourceMapResolver} from 'tools';
+import {Platform} from 'react-native';
 
 const defaultGlobalHandler = ErrorUtils.getGlobalHandler();
 
-global.ErrorUtils.setGlobalHandler(async (error, isFatal) => {
-  if (__DEV__) {
-    console.error(error);
-  }
-  try {
-    crashlytics().log('pre resolve stacktracer');
-    crashlytics().log(JSON.stringify(error, Object.getOwnPropertyNames(error)));
-    const stack = await SourceMapResolver.stackTrace(error);
-    crashlytics().log('after resolve stacktracer');
-    crashlytics().log(JSON.stringify(stack));
-  } catch (errorProcess) {
-    crashlytics().log(JSON.stringify(errorProcess));
-  }
-  defaultGlobalHandler(error, isFatal);
-});
+!__DEV__ &&
+  global.ErrorUtils.setGlobalHandler(async (error, isFatal) => {
+    try {
+      crashlytics().log('pre resolve stacktracer');
+      crashlytics().log(
+        JSON.stringify(error, Object.getOwnPropertyNames(error)),
+      );
+      const stack = await SourceMapResolver.stackTrace(error);
+      crashlytics().log('after resolve stacktracer');
+      crashlytics().log('originalStackTrace (clear):');
+      crashlytics().log(JSON.stringify(stack.originalStackTrace));
+      crashlytics().log('compiledStackTrace (obfuscated):');
+      crashlytics().log(JSON.stringify(stack.compiledStackTrace));
+      crashlytics().log('command to resolve all stack tracer:');
+      crashlytics().log(
+        `node .sourcemap/resolver.${
+          Platform.OS === 'ios' ? 'ios' : 'android'
+        }.js '${JSON.stringify(stack.compiledStackTrace)}'`,
+      );
+    } catch (errorProcess) {
+      crashlytics().log(JSON.stringify(errorProcess));
+    }
+    defaultGlobalHandler(error, isFatal);
+  });
 
 type Props = {
   screen: string,

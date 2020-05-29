@@ -1,46 +1,77 @@
 // @flow
 
+import RNFS from 'react-native-fs';
 import SourceMap from 'source-map';
 import StackTrace from 'stacktrace-js';
 import {Platform} from 'react-native';
 
+type Coords = {
+  lineNumber: number,
+  columnNumber: number,
+};
+
+type StackResolver = Promise<{
+  originalStackTrace: Array<any>,
+  compiledStackTrace: Array<any>,
+}>;
+
 class SourceMapResolver {
   static instance: SourceMapResolver;
-  sourceMapper: SourceMap.SourceMapConsumer;
+  sourceMapper: Coords => SourceMap.MappedPosition;
 
   constructor() {
-    if (!SourceMapResolver.instance) {
-      SourceMapResolver.instance = this;
-    }
-
-    this.createSourceMapper();
-    return SourceMapResolver.instance;
+    /*
+    you must use get() function for use this singleton.
+    initialize this class all times is very expensive when crashed.
+    */
   }
 
-  // it is possible that this block the ui thread
+  static get = () => {
+    if (!SourceMapResolver.instance) {
+      SourceMapResolver.instance = new SourceMapResolver();
+    }
+    return SourceMapResolver.instance;
+  };
+
   createSourceMapper = async () => {
-    const sourceMap = require('../../sourcemap/sourcemap.json');
+    const SoureMapBundlePath =
+      Platform.OS === 'ios'
+        ? `${RNFS.MainBundlePath}/sourcemap.app.json`
+        : 'sourcemap.app.json';
 
-    const mapConsumer = new SourceMap.SourceMapConsumer(sourceMap);
+    const fileExists =
+      Platform.OS === 'ios'
+        ? await RNFS.exists(SoureMapBundlePath)
+        : await RNFS.existsAssets(SoureMapBundlePath);
 
-    this.sourceMapper = row => {
-      return mapConsumer.originalPositionFor({
+    if (!fileExists) {
+      throw new Error(
+        __DEV__
+          ? 'Unable to read source maps in DEV mode'
+          : `Unable to read source maps, possibly invalid sourceMapBundle file, please check that it exists here: ${SoureMapBundlePath}`,
+      );
+    }
+
+    const mapContents =
+      Platform.OS === 'ios'
+        ? await RNFS.readFile(SoureMapBundlePath, 'utf8')
+        : await RNFS.readFileAssets(SoureMapBundlePath, 'utf8');
+    const sourceMaps = JSON.parse(mapContents);
+    const mapConsumer = new SourceMap.SourceMapConsumer(sourceMaps);
+
+    this.sourceMapper = row =>
+      mapConsumer.originalPositionFor({
         line: row.lineNumber,
         column: row.columnNumber,
       });
-    };
 
-    // load mapper in cache, this operation is slow
-    this.sourceMapper({lineNumber: 0, columnNumber: 0});
+    // load mapper in cache
+    this.sourceMapper({lineNumber: 1, columnNumber: 1});
   };
 
-  stackTrace = async (crash: any) => {
+  stackTrace = async (crash: any): StackResolver => {
     if (!this.sourceMapper) {
       await this.createSourceMapper();
-    }
-
-    if (!this.sourceMapper) {
-      return ['no sourceMap'];
     }
 
     let minStackTrace;
@@ -49,6 +80,13 @@ class SourceMapResolver {
       minStackTrace = await StackTrace.fromError(crash);
     } else {
       minStackTrace = await StackTrace.fromError(crash, {offline: true});
+    }
+
+    if (!this.sourceMapper) {
+      return {
+        originalStackTrace: ['no loaded'],
+        compiledStackTrace: minStackTrace,
+      };
     }
 
     const stackTrace = minStackTrace.map((row, index) => {
@@ -65,11 +103,10 @@ class SourceMapResolver {
       };
     });
 
-    return stackTrace;
+    return {originalStackTrace: stackTrace, compiledStackTrace: minStackTrace};
   };
 }
 
-const instance = new SourceMapResolver();
-Object.freeze(instance);
+const instance = new SourceMapResolver.get();
 
 export default instance;

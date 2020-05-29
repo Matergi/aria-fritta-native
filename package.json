@@ -3,15 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "bash prestart.sh && react-native start --reset-cache",
+    "start": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint .",
     "link:font": "react-native link",
     "android:connect": "adb reverse tcp:8081 tcp:8081",
     "android:menu": "adb shell input keyevent 82",
-    "build:ios": "yarn build:sourcemap && react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
-    "build:android": "yarn build:sourcemap && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
-    "build:sourcemap": "react-native bundle --entry-file index.js --bundle-output ./sourcemap/bundle.js --sourcemap-output ./sourcemap/sourcemap.json"
+    "build:ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios --sourcemap-output ./ios/sourcemap.all.json && node .sourcemap/index.js",
+    "build:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.2",
@@ -44,6 +43,7 @@
     "react-native-dismiss-keyboard": "^1.0.0",
     "react-native-fast-image": "^7.0.2",
     "react-native-fbsdk": "^1.1.1",
+    "react-native-fs": "2.15.2",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-haptic-feedback": "^1.9.0",
     "react-native-image-base64": "^0.1.4",

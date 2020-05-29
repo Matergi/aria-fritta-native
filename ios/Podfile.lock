@@ -27,6 +27,9 @@ PODS:
     - FirebaseAnalytics (= 6.5.1)
   - Firebase/CoreOnly (6.25.0):
     - FirebaseCore (= 6.7.1)
+  - Firebase/Crashlytics (6.25.0):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 4.1.0)
   - Firebase/Messaging (6.25.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 4.4.1)
@@ -52,6 +55,14 @@ PODS:
     - GoogleUtilities/Logger (~> 6.5)
     - nanopb (~> 1.30905.0)
   - FirebaseCoreDiagnosticsInterop (1.2.0)
+  - FirebaseCrashlytics (4.1.0):
+    - FirebaseAnalyticsInterop (~> 1.2)
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstallations (~> 1.1)
+    - GoogleDataTransport (~> 6.1)
+    - GoogleDataTransportCCTSupport (~> 3.1)
+    - nanopb (~> 1.30905.0)
+    - PromisesObjC (~> 1.2)
   - FirebaseInstallations (1.2.0):
     - FirebaseCore (~> 6.6)
     - GoogleUtilities/Environment (~> 6.6)
@@ -259,6 +270,8 @@ PODS:
     - Firebase/Messaging (~> 6.25.0)
     - React
     - RNFBApp
+  - RNFS (2.15.2):
+    - React
   - RNGestureHandler (1.6.1):
     - React
   - RNLaunchNavigator (1.0.6):
@@ -291,6 +304,7 @@ PODS:
 DEPENDENCIES:
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - Firebase/Crashlytics
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - lottie-ios (from `../node_modules/lottie-ios`)
@@ -331,6 +345,7 @@ DEPENDENCIES:
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBCrashlytics (from `../node_modules/@react-native-firebase/crashlytics`)"
   - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
+  - RNFS (from `../node_modules/react-native-fs`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNLaunchNavigator (from `../node_modules/react-native-launch-navigator`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
@@ -357,6 +372,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
+    - FirebaseCrashlytics
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
@@ -457,6 +473,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-firebase/crashlytics"
   RNFBMessaging:
     :path: "../node_modules/@react-native-firebase/messaging"
+  RNFS:
+    :path: "../node_modules/react-native-fs"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNLaunchNavigator:
@@ -495,6 +513,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 6023faeada5afa95a349fccafb40900e32e9ac42
   FirebaseCoreDiagnostics: 4a773a47bd83bbd5a9b1ccf1ce7caa8b2d535e67
   FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
+  FirebaseCrashlytics: fff345f16a07f0b23cb342d8de5a42cec6de3492
   FirebaseInstallations: 2119fb3e46b0a88bfdbf12562f855ee3252462fa
   FirebaseInstanceID: cef67c4967c7cecb56ea65d8acbb4834825c587b
   FirebaseMessaging: 29543feb343b09546ab3aa04d008ee8595b43c44
@@ -546,6 +565,7 @@ SPEC CHECKSUMS:
   RNFBApp: 25a6476dfd7aac2bcbe984f569875bcea122895b
   RNFBCrashlytics: e5c49721cac180f72c89ea67cc13a614b9fcecc4
   RNFBMessaging: ea4ce2a6466b3a6dfb46a8c28c38a7989da36a31
+  RNFS: 54da03c2b7d862c42ea3ca8c7f86f892760a535a
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNLaunchNavigator: 8dd91682568df75b32992448b105ac9039a3a2bd
   RNPermissions: 9e437a90de84a5402ff689d4da233730b81556c2
@@ -561,6 +581,6 @@ SPEC CHECKSUMS:
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   yoga: 312528f5bbbba37b4dcea5ef00e8b4033fdd9411
 
-PODFILE CHECKSUM: e3a23f31bd314b35cfa9593570bbf98a6712aef2
+PODFILE CHECKSUM: 6bbf465abec2dd80a7e71dfb3c90836befd46cc2
 
 COCOAPODS: 1.9.0

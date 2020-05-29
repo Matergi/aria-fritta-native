@@ -1,0 +1,17 @@
+{
+  "name": "sourcemap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cd": "^0.3.3",
+    "cozy": "file:..",
+    "fs": "0.0.1-security",
+    "source-map": "^0.7.3"
+  }
+}
