@@ -3,6 +3,18 @@
 doc: http://giacomo-materozzi.gitbook.io/aria-fritta-native
 
 # Aria Fritta Native
+Http & Apollo 
+
+## Services implemented
+* Firebase
+* Stripe
+* Google Places
+* Facebook Login
+
+## Library to manage state 
+* Redux
+* Redux-thunk https://github.com/reduxjs/redux-thunk
+* Redux-saga https://redux-saga.js.org/
 
 android:
 
