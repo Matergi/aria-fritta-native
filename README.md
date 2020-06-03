@@ -2,6 +2,9 @@
 
 doc: http://giacomo-materozzi.gitbook.io/aria-fritta-native
 
+# Todo
+- [ ] rewrite in typescript
+
 # Aria Fritta Native
 Http & Apollo 
 
