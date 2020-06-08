@@ -24,17 +24,16 @@ const defaultGlobalHandler = ErrorUtils.getGlobalHandler();
         JSON.stringify(error, Object.getOwnPropertyNames(error)),
       );
       const stack = await SourceMapResolver.stackTrace(error);
-      crashlytics().log('after resolve stacktracer');
-      crashlytics().log('originalStackTrace (clear):');
-      crashlytics().log(JSON.stringify(stack.originalStackTrace));
       crashlytics().log('compiledStackTrace (obfuscated):');
       crashlytics().log(JSON.stringify(stack.compiledStackTrace));
-      crashlytics().log('command to resolve all stack tracer:');
       crashlytics().log(
-        `node .sourcemap/resolver.${
+        `command to resolve all stack tracer: node .sourcemap/resolver.${
           Platform.OS === 'ios' ? 'ios' : 'android'
         }.js '${JSON.stringify(stack.compiledStackTrace)}'`,
       );
+      crashlytics().log('after resolve stacktracer');
+      crashlytics().log('originalStackTrace (clear):');
+      crashlytics().log(JSON.stringify(stack.originalStackTrace));
     } catch (errorProcess) {
       crashlytics().log(JSON.stringify(errorProcess));
     }

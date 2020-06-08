@@ -1,4 +1,3 @@
-const sourcemap = require('../ios/sourcemap.all.json');
 const fs = require('fs');
 const SourceMapConsumer = require('source-map').SourceMapConsumer;
 const SourceMapGenerator = require('source-map').SourceMapGenerator;
@@ -28,14 +27,39 @@ const removeSource = async (sourcesToRemove, map) => {
   return generator.toJSON();
 };
 
-const run = async () => {
+const runIos = async () => {
+  const sourcemap = require('../ios/sourcemap.all.json');
+  if (!sourcemap) {
+    console.error('ios: no source map');
+    return;
+  }
   const newMap = await removeSource('node_modules', sourcemap);
   fs.writeFile('ios/sourcemap.app.json', JSON.stringify(newMap), err => {
     if (err) {
       throw Error(err);
     }
-    console.log('success');
+    console.log('ios: source map generated successfully');
   });
+};
+
+const runAndroid = async () => {
+  const sourcemap = require('../android/app/src/main/assets/sourcemap.all.json');
+  if (!sourcemap) {
+    console.error('android: no source map');
+    return;
+  }
+  const newMap = await removeSource('node_modules', sourcemap);
+  fs.writeFile('ios/sourcemap.app.json', JSON.stringify(newMap), err => {
+    if (err) {
+      throw Error(err);
+    }
+    console.log('android: source map generated successfully');
+  });
+};
+
+const run = async () => {
+  await runIos();
+  await runAndroid();
 };
 
 run();
